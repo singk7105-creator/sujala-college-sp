@@ -1,4 +1,3 @@
-
 <!doctype html>
 <html lang="hi">
 <head>
@@ -28,7 +27,7 @@
       color: #fff;
       font-family: "Poppins", sans-serif;
       font-weight: 700;
-      text-align: center;
+      text-align: left; /* Left aligned as requested */
       font-size: 1.1rem;
       letter-spacing: 0.5px;
     }
@@ -54,7 +53,7 @@
     }
     .result-link-btn {
       background: var(--orange);
-      color: #fff;
+      color: #ffffff !important; /* White text explicitly set */
       padding: 6px 14px;
       border-radius: 8px;
       font-weight: 600;
@@ -62,10 +61,11 @@
       display: inline-flex;
       align-items: center;
       gap: 5px;
+      text-decoration: none;
     }
     .result-link-btn:hover {
       background: #e96d00;
-      color: #fff;
+      color: #ffffff !important;
     }
   </style>
 </head>
@@ -93,13 +93,13 @@
             <div class="table-responsive">
               <table class="result-table">
                 <thead>
-                  <!-- Sabse upar wali poori line Today Result ki -->
+                  <!-- Left aligned Today Result header -->
                   <tr>
                     <th colspan="2" class="result-today-header">
                       <i class="bi bi-bell-fill me-2"></i> Today Result Updates
                     </th>
                   </tr>
-                  <!-- Uske niche wali row: Left mein naam, Right mein link -->
+                  <!-- Sub header row -->
                   <tr class="result-sub-header">
                     <th style="width: 65%;">Result Ka Naam (Result Name)</th>
                     <th style="width: 35%; text-align: right;">Result Link</th>
