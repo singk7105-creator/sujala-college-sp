@@ -349,20 +349,6 @@ a {
   font-size: 1.02rem;
 }
 
-.feature-line {
-  display: flex;
-  gap: 12px;
-  align-items: flex-start;
-  margin: 17px 0;
-  color: var(--ink);
-}
-
-.feature-line i {
-  color: var(--orange);
-  font-size: 1.2rem;
-  margin-top: 2px;
-}
-
 .notice-card {
   border: 0;
   border-radius: 20px;
@@ -402,43 +388,6 @@ a {
   font-size: 0.72rem;
   font-weight: 700;
   margin-bottom: 12px;
-}
-
-.cta {
-  background: var(--navy);
-  color: #fff;
-  border-radius: 28px;
-  padding: 45px;
-  position: relative;
-  overflow: hidden;
-}
-
-.cta:after {
-  content: "";
-  position: absolute;
-  width: 300px;
-  height: 300px;
-  border: 45px solid rgba(255, 121, 0, 0.17);
-  border-radius: 50%;
-  right: -100px;
-  top: -170px;
-}
-
-.cta h2 {
-  font-weight: 800;
-  position: relative;
-  z-index: 1;
-}
-
-.cta p {
-  color: rgba(255, 255, 255, 0.72);
-  position: relative;
-  z-index: 1;
-}
-
-.cta .btn {
-  position: relative;
-  z-index: 1;
 }
 
 .contact-card {
@@ -519,6 +468,7 @@ footer a:hover {
   color: #fff;
 }
 
+/* Updated Back to Top Button with Center Alignment & Bold Arrow */
 .back-top {
   position: fixed;
   right: 18px;
@@ -532,11 +482,16 @@ footer a:hover {
   color: #fff;
   box-shadow: 0 8px 20px rgba(255, 121, 0, 0.3);
   display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  line-height: 1;
+  font-size: 1.25rem;
+  font-weight: 800;
 }
 
 .back-top.show {
-  display: grid;
-  place-items: center;
+  display: flex;
 }
 
 .alert {
@@ -558,10 +513,6 @@ footer a:hover {
   }
   .section {
     padding: 62px 0;
-  }
-  .cta {
-    padding: 30px 24px;
-    text-align: center;
   }
   .top-strip .right-info {
     display: none;
