@@ -109,7 +109,24 @@
       border-color: var(--orange);
       box-shadow: 0 0 0 3px rgba(255, 121, 0, 0.10);
     }
-    
+
+    .result-search-clear {
+      position: absolute;
+      right: 13px;
+      top: 50%;
+      transform: translateY(-50%);
+      border: none;
+      background: transparent;
+      color: var(--muted);
+      font-size: 18px;
+      display: none;
+      cursor: pointer;
+    }
+
+    .result-search-clear.show {
+      display: block;
+    }
+
     /* =================================
        RESULT LINK BUTTON
     ================================= */
@@ -247,6 +264,13 @@
                 placeholder="Search result by course, subject or semester..."
                 autocomplete="off"
                 aria-label="Search examination results">
+              <button
+                type="button"
+                id="clearSearch"
+                class="result-search-clear"
+                aria-label="Clear search">
+                <i class="bi bi-x-circle-fill"></i>
+              </button>
             </div>
 
             <!-- RESULT COUNT -->
@@ -510,6 +534,18 @@
 
       visibleCount = RESULTS_PER_PAGE;
       renderResults();
+    });
+
+    // =================================
+    // CLEAR SEARCH
+    // =================================
+    clearSearch.addEventListener("click", () => {
+      searchInput.value = "";
+      clearSearch.classList.remove("show");
+      filteredResults = [...allResults];
+      visibleCount = RESULTS_PER_PAGE;
+      renderResults();
+      searchInput.focus();
     });
 
     // =================================
