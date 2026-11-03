@@ -9,6 +9,46 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Hind:wght@400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./css/style.css">
+  <style>
+    /* Table styling to match website theme */
+    .admin-table {
+      width: 100%;
+      margin-top: 20px;
+      border-collapse: separate;
+      border-spacing: 0;
+      border-radius: 14px;
+      overflow: hidden;
+      border: 1px solid var(--line);
+    }
+    .admin-table th, .admin-table td {
+      padding: 14px 16px;
+      text-align: left;
+      font-size: 0.95rem;
+    }
+    .admin-table th {
+      background-color: var(--navy);
+      color: #fff;
+      font-family: "Poppins", sans-serif;
+      font-weight: 600;
+    }
+    .admin-table tbody tr {
+      background-color: #fff;
+      transition: background-color 0.2s;
+    }
+    .admin-table tbody tr:nth-child(even) {
+      background-color: var(--cream);
+    }
+    .admin-table tbody tr:hover {
+      background-color: rgba(255, 121, 0, 0.05);
+    }
+    .admin-table td {
+      border-top: 1px solid var(--line);
+      color: var(--ink);
+    }
+    .feature-line i {
+      color: var(--orange);
+    }
+  </style>
 </head>
 <body>
 
@@ -27,24 +67,60 @@
 
       <div class="row g-4 justify-content-center">
         <div class="col-lg-8">
-          <div class="contact-card">
+          <div class="contact-card mb-4">
             <div class="contact-icon"><i class="bi bi-info-circle-fill"></i></div>
             <h3 class="mb-3">Aapka Apna Digital Mitrr</h3>
             <p><strong>Sujala College Suchna Portal</strong> vidyarthiyon tak college aur university se judi upyogi jankari saral, vyavasthit aur samay par pahunchane ka ek digital prayas hai. Yahan aapko sabhi naye updates, notices aur zaroori links ek hi jagah milte hain.</p>
             
             <div class="feature-line mt-4">
-              <i class="bi bi-check-circle-fill text-orange me-2"></i>
+              <i class="bi bi-check-circle-fill me-2"></i>
               <span>Sabhi university aur college ki official soochnayein ek platform par.</span>
             </div>
             <div class="feature-line mt-2">
-              <i class="bi bi-check-circle-fill text-orange me-2"></i>
+              <i class="bi bi-check-circle-fill me-2"></i>
               <span>Aasan aur tez mobile-friendly interface jo har device par asaani se chale.</span>
             </div>
             <div class="feature-line mt-2">
-              <i class="bi bi-check-circle-fill text-orange me-2"></i>
+              <i class="bi bi-check-circle-fill me-2"></i>
               <span>Vidyarthiyon ke samay ki bachat aur sateek jankari ki prapti.</span>
             </div>
           </div>
+
+          <!-- Admin Details Table (3x3 Grid/Table) -->
+          <div class="contact-card">
+            <h3 class="mb-3 text-navy"><i class="bi bi-people-fill me-2 text-orange"></i>Portal Management & Admins</h3>
+            <p class="text-muted small">Hamari team jo is portal ko sanchalit karti hai:</p>
+            
+            <div class="table-responsive">
+              <table class="admin-table">
+                <thead>
+                  <tr>
+                    <th>Naam (Name)</th>
+                    <th>Role / Pad</th>
+                    <th>Contact Number</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong>Chhatar Singh Bargurjar</strong></td>
+                    <td><span class="badge bg-orange text-white" style="background: var(--orange);">Owner</span></td>
+                    <td>*contact number*</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Shubham Prajapat</strong></td>
+                    <td><span class="badge bg-navy text-white" style="background: var(--navy);">Admin</span></td>
+                    <td>*contact number*</td>
+                  </tr>
+                  <tr>
+                    <td><em>Support Team</em></td>
+                    <td><em>Technical Assistant</em></td>
+                    <td>-</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
         </div>
       </div>
     </div>
