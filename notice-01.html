@@ -7,18 +7,37 @@
 
   <title>Supplementary Time Table 2026 | Sujala College Suchna Portal</title>
 
+  <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Bootstrap Icons -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+
+  <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Hind:wght@400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
+  <!-- Main CSS -->
   <link rel="stylesheet" href="./css/style.css">
 
+
   <style>
-    /* Notice Page Heading */
+
+    /* =================================
+       NOTICE HEADING SECTION
+    ================================= */
+
     .notice-heading-section {
-      padding: 35px 0 65px;
+      padding: 30px 0 35px;
       background: transparent;
-      text-align: center;
+      text-align: left;
+    }
+
+
+    /* Back To Home */
+
+    .notice-top-row {
+      text-align: left;
+      margin-bottom: 28px;
     }
 
     .notice-back {
@@ -41,41 +60,67 @@
       border-color: var(--navy);
     }
 
-    .notice-top-row {
+
+    /* Heading Content */
+
+    .notice-heading-content {
       text-align: left;
-      margin-bottom: 25px;
+      padding-bottom: 22px;
+      border-bottom: 1px solid var(--line);
     }
 
-    .notice-label {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      background: rgba(255, 121, 0, 0.10);
-      color: var(--orange);
-      font-family: 'Poppins', sans-serif;
-      font-size: 11px;
-      font-weight: 700;
-      padding: 7px 14px;
-      border-radius: 30px;
-      margin-bottom: 12px;
+
+    /* Eyebrow Badge */
+
+    .notice-heading-content .eyebrow {
+      display: inline-block;
+      position: relative;
+      inset: auto;
+      transform: none;
+      float: none;
+      margin: 0 0 14px !important;
+      padding: 7px 15px;
+      line-height: 1.5;
+      height: auto;
+      vertical-align: middle;
+      white-space: normal;
     }
+
+
+    /* Main Heading */
 
     .notice-page-title {
+      display: block;
+      position: relative;
+      clear: both;
       color: var(--navy);
       font-family: 'Hind', sans-serif;
       font-weight: 700;
       font-size: 30px;
-      line-height: 1.4;
-      margin-bottom: 8px;
+      line-height: 1.5;
+      text-align: left;
+      margin: 0 0 8px !important;
+      padding: 0;
     }
 
+
+    /* Date */
+
     .notice-date {
+      display: block;
       color: #8a94a6;
       font-size: 12px;
+      line-height: 1.6;
+      text-align: left;
       margin: 0;
     }
 
-    /* Main Notice Container */
+
+
+    /* =================================
+       MAIN NOTICE CARD
+    ================================= */
+
     .notice-container-card {
       background: #fff;
       border-radius: 20px;
@@ -87,6 +132,9 @@
       position: relative;
     }
 
+
+    /* Notice Poster */
+
     .notice-img-wrap {
       background: var(--cream);
       border-radius: 14px;
@@ -96,24 +144,46 @@
     }
 
     .notice-img-wrap img {
+      display: block;
       max-height: 420px;
       width: 100%;
       object-fit: contain;
       border-radius: 10px;
+      margin: auto;
     }
 
-    /* Responsive */
+
+
+    /* =================================
+       MOBILE RESPONSIVE
+    ================================= */
+
     @media (max-width: 576px) {
+
       .notice-heading-section {
-        padding: 25px 0 35px;
+        padding: 25px 0 30px;
       }
 
       .notice-top-row {
-        margin-bottom: 22px;
+        margin-bottom: 24px;
+      }
+
+      .notice-heading-content {
+        padding-bottom: 18px;
+      }
+
+      .notice-heading-content .eyebrow {
+        margin-bottom: 13px !important;
       }
 
       .notice-page-title {
         font-size: 24px;
+        line-height: 1.5;
+        padding: 0 2px;
+      }
+
+      .notice-date {
+        font-size: 11px;
       }
 
       .notice-container-card {
@@ -129,43 +199,83 @@
       .notice-img-wrap img {
         max-height: 350px;
       }
+
     }
+
   </style>
+
 </head>
+
 
 <body>
 
-  <!-- Dynamic Navbar -->
+
+  <!-- =================================
+       DYNAMIC NAVBAR
+  ================================= -->
+
   <nav class="navbar navbar-expand-lg sticky-top" id="mainNavbar">
-    <!-- header.json se load hoga -->
+    <!-- Header JSON se load hoga -->
   </nav>
 
 
-  <!-- Notice Heading Section -->
+
+  <!-- =================================
+       NOTICE HEADING SECTION
+  ================================= -->
+
   <section class="notice-heading-section">
 
     <div class="container">
 
+
       <!-- Back To Home -->
+
       <div class="notice-top-row">
+
         <a href="index.html#updates" class="notice-back">
+
           <i class="bi bi-arrow-left"></i>
+
           Back to Home
+
         </a>
+
       </div>
 
-      <!-- Center Heading -->
+
+
+      <!-- Heading Content -->
+
       <div class="notice-heading-content">
 
-        <span class="eyebrow">TIME TABLE UPDATE</span>
+
+        <!-- Category Badge -->
+
+        <span class="eyebrow">
+          TIME TABLE UPDATE
+        </span>
+
+
+        <!-- Main Heading -->
+
         <h1 class="notice-page-title">
+
           सप्लीमेंट्री परीक्षा के टाइम टेबल जारी
+
         </h1>
 
+
+        <!-- Published Date -->
+
         <p class="notice-date">
+
           <i class="bi bi-calendar-event me-1"></i>
+
           Declared On: 31 October 2026
+
         </p>
+
 
       </div>
 
@@ -174,16 +284,25 @@
   </section>
 
 
-  <!-- Main Content -->
+
+  <!-- =================================
+       MAIN NOTICE CONTENT
+  ================================= -->
+
   <main class="container mb-4">
 
     <div class="row justify-content-center">
 
       <div class="col-lg-10">
 
+
+        <!-- Notice Container -->
+
         <div class="notice-container-card p-4 p-md-5">
 
-          <!-- Notice Poster -->
+
+          <!-- Notice Poster / Image -->
+
           <div class="notice-img-wrap mb-4">
 
             <img
@@ -194,19 +313,27 @@
           </div>
 
 
-          <!-- Main Details -->
+
+          <!-- Main Details Heading -->
+
           <h3 class="fw-bold text-navy mb-3 fs-4">
 
             <i class="bi bi-info-circle-fill text-orange me-2"></i>
+
             Soochna Ka Poora Vivran
 
           </h3>
+
+
+
+          <!-- Notice Description -->
 
           <p class="text-secondary lh-lg">
 
             विश्वविद्यालय द्वारा वार्षिक परीक्षा प्रणाली के अंतर्गत आयोजित होने वाली सप्लीमेंट्री परीक्षाओं की समय सारणी (Time Table) आधिकारिक पोर्टल पर जारी कर दी गई है। सभी संबंधित छात्र-छात्राएं नीचे दिए गए लिंक से अपना टाइम टेबल डाउनलोड कर परीक्षा तिथियों की जांच कर सकते हैं।
 
           </p>
+
 
           <p class="text-secondary lh-lg mb-4">
 
@@ -215,22 +342,35 @@
           </p>
 
 
+
           <!-- Download Action Box -->
+
           <div class="p-4 rounded-4 bg-light border d-flex flex-wrap align-items-center justify-content-between gap-3">
+
+
+            <!-- Download Information -->
 
             <div>
 
               <h5 class="fw-bold text-navy mb-1">
+
                 Download Official PDF
+
               </h5>
 
               <p class="text-muted small mb-0">
+
                 Original time-table document ko seedha download karein.
+
               </p>
 
             </div>
 
-            <div class="d-flex gap-2">
+
+
+            <!-- Download Button -->
+
+            <div>
 
               <a
                 href="#"
@@ -240,13 +380,16 @@
                 style="background: var(--orange);">
 
                 <i class="bi bi-download me-2"></i>
+
                 Download PDF
 
               </a>
 
             </div>
 
+
           </div>
+
 
         </div>
 
@@ -257,20 +400,30 @@
   </main>
 
 
-  <!-- Dynamic Footer -->
+
+  <!-- =================================
+       DYNAMIC FOOTER
+  ================================= -->
+
   <footer>
 
     <div class="container">
 
       <div class="row g-4">
 
+
+        <!-- Portal Information -->
+
         <div class="col-lg-4">
 
           <h5>Sujala_College Suchna Portal</h5>
 
           <p class="mt-2 mb-3">
+
             College & University Updates — All in One Place.<br>
+
             आपका Digital Mitrr.
+
           </p>
 
           <div class="mt-3" id="footerSocialLinks"></div>
@@ -278,25 +431,41 @@
         </div>
 
 
+
+        <!-- Quick Links -->
+
         <div class="col-6 col-lg-4">
 
           <h5>Quick Links</h5>
 
-          <ul class="list-unstyled lh-lg mt-3" id="footerQuickLinks"></ul>
+          <ul
+            class="list-unstyled lh-lg mt-3"
+            id="footerQuickLinks">
+          </ul>
 
         </div>
 
+
+
+        <!-- Useful Sections -->
 
         <div class="col-6 col-lg-4">
 
           <h5>Useful Sections</h5>
 
-          <ul class="list-unstyled lh-lg mt-3" id="footerUsefulSections"></ul>
+          <ul
+            class="list-unstyled lh-lg mt-3"
+            id="footerUsefulSections">
+          </ul>
 
         </div>
 
+
       </div>
 
+
+
+      <!-- Footer Bottom -->
 
       <hr class="border-light opacity-25 my-4">
 
@@ -304,72 +473,122 @@
       <div class="d-flex justify-content-between small">
 
         <span>
-          © <span id="year"></span> Sujala_College Suchna Portal. All Rights Reserved.
+
+          © <span id="year"></span>
+
+          Sujala_College Suchna Portal. All Rights Reserved.
+
         </span>
 
       </div>
+
 
     </div>
 
   </footer>
 
 
-  <!-- Back To Top -->
+
+  <!-- =================================
+       BACK TO TOP BUTTON
+  ================================= -->
+
   <button class="back-top" id="backTop" aria-label="Back to top">
+
     <i class="bi bi-arrow-up"></i>
+
   </button>
 
 
-  <!-- Bootstrap JS -->
+
+  <!-- =================================
+       BOOTSTRAP JAVASCRIPT
+  ================================= -->
+
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 
 
+
+  <!-- =================================
+       PAGE JAVASCRIPT
+  ================================= -->
+
   <script>
 
+
     // Current Year
-    document.getElementById("year").textContent = new Date().getFullYear();
+
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
+
 
 
     // Back To Top
+
     const backTop = document.getElementById("backTop");
 
     window.addEventListener("scroll", () => {
-      backTop.classList.toggle("show", window.scrollY > 450);
+
+      backTop.classList.toggle(
+        "show",
+        window.scrollY > 450
+      );
+
     });
+
 
     backTop.addEventListener("click", () => {
+
       window.scrollTo({
+
         top: 0,
+
         behavior: "smooth"
+
       });
+
     });
 
 
-    // Load Header
+
+    // =================================
+    // LOAD HEADER
+    // =================================
+
     async function loadHeader() {
 
       try {
 
         const res = await fetch('./data/header.json');
 
-        if (!res.ok) throw new Error("Header not found");
+        if (!res.ok) {
+
+          throw new Error("Header not found");
+
+        }
 
         const data = await res.json();
+
 
         document.getElementById("mainNavbar").innerHTML = `
 
           <div class="container">
+
 
             <a class="navbar-brand" href="index.html">
 
               <img src="${data.logo}" alt="Logo">
 
               <span>
+
                 <span class="brand-name">${data.brandName}</span><br>
+
                 <span class="brand-sub">${data.brandSub}</span>
+
               </span>
 
             </a>
+
 
 
             <button
@@ -386,19 +605,27 @@
             </button>
 
 
+
             <div class="collapse navbar-collapse" id="mainNav">
 
+
               <ul class="navbar-nav ms-auto align-items-lg-center">
+
 
                 ${data.navLinks.map(nav => `
 
                   <li class="nav-item">
+
                     <a class="nav-link" href="${nav.link}">
+
                       ${nav.title}
+
                     </a>
+
                   </li>
 
                 `).join("")}
+
 
 
                 <li class="nav-item ms-lg-2 mt-2 mt-lg-0">
@@ -406,19 +633,23 @@
                   <a class="btn btn-brand btn-sm" href="index.html#apps">
 
                     Explore Portal
+
                     <i class="bi bi-arrow-up-right ms-1"></i>
 
                   </a>
 
                 </li>
 
+
               </ul>
 
             </div>
 
+
           </div>
 
         `;
+
 
       } catch (err) {
 
@@ -430,45 +661,69 @@
 
 
 
-    // Load Footer
+    // =================================
+    // LOAD FOOTER
+    // =================================
+
     async function loadFooter() {
 
       try {
 
         const res = await fetch('./data/footer.json');
 
-        if (!res.ok) throw new Error("Footer not found");
+        if (!res.ok) {
+
+          throw new Error("Footer not found");
+
+        }
 
         const data = await res.json();
 
+
+
+        // Quick Links
 
         document.getElementById("footerQuickLinks").innerHTML =
 
           data.quickLinks.map(item => `
 
             <li>
+
               <a href="${item.link}">
+
                 ${item.title}
+
               </a>
+
             </li>
 
           `).join("");
 
 
+
+
+        // Useful Sections
 
         document.getElementById("footerUsefulSections").innerHTML =
 
           data.usefulSections.map(item => `
 
             <li>
+
               <a href="${item.link}">
+
                 ${item.title}
+
               </a>
+
             </li>
 
           `).join("");
 
 
+
+
+        // Social Links
 
         if (data.socialLinks) {
 
@@ -490,6 +745,7 @@
 
         }
 
+
       } catch (err) {
 
         console.error("Footer load error:", err);
@@ -499,9 +755,15 @@
     }
 
 
-    // Initialize
+
+    // =================================
+    // INITIALIZE PAGE
+    // =================================
+
     loadHeader();
+
     loadFooter();
+
 
   </script>
 
