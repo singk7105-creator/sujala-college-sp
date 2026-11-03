@@ -1,0 +1,15 @@
+{
+  "quickLinks": [
+    { "title": "Home", "link": "index.html#home" },
+    { "title": "Our Apps", "link": "index.html#apps" },
+    { "title": "Updates", "link": "index.html#updates" },
+    { "title": "About Us", "link": "index.html#about" },
+    { "title": "Contact Us", "link": "contact.html" }
+  ],
+  "usefulSections": [
+    { "title": "Admissions", "link": "index.html#apps" },
+    { "title": "Results", "link": "index.html#apps" },
+    { "title": "Exam Updates", "link": "index.html#apps" },
+    { "title": "Downloads", "link": "index.html#apps" }
+  ]
+}
