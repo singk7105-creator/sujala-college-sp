@@ -10,20 +10,19 @@
   <link href="https://fonts.googleapis.com/css2?family=Hind:wght@400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./css/style.css">
   <style>
-    /* Table styling to match website theme */
+    /* Clean Table Styling */
     .admin-table {
       width: 100%;
-      margin-top: 20px;
-      border-collapse: separate;
-      border-spacing: 0;
-      border-radius: 14px;
+      margin-top: 15px;
+      border-collapse: collapse;
+      border-radius: 12px;
       overflow: hidden;
       border: 1px solid var(--line);
     }
     .admin-table th, .admin-table td {
-      padding: 14px 16px;
+      padding: 12px 14px;
       text-align: left;
-      font-size: 0.95rem;
+      font-size: 0.9rem;
     }
     .admin-table th {
       background-color: var(--navy);
@@ -33,13 +32,9 @@
     }
     .admin-table tbody tr {
       background-color: #fff;
-      transition: background-color 0.2s;
     }
     .admin-table tbody tr:nth-child(even) {
       background-color: var(--cream);
-    }
-    .admin-table tbody tr:hover {
-      background-color: rgba(255, 121, 0, 0.05);
     }
     .admin-table td {
       border-top: 1px solid var(--line);
@@ -47,6 +42,11 @@
     }
     .feature-line i {
       color: var(--orange);
+    }
+    .table-responsive {
+      width: 100%;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
     }
   </style>
 </head>
@@ -103,12 +103,12 @@
                 <tbody>
                   <tr>
                     <td><strong>Chhatar Singh Bargurjar</strong></td>
-                    <td><span class="badge bg-orange text-white" style="background: var(--orange);">Owner</span></td>
+                    <td><span class="badge text-white" style="background: var(--orange);">Owner</span></td>
                     <td>*contact number*</td>
                   </tr>
                   <tr>
                     <td><strong>Shubham Prajapat</strong></td>
-                    <td><span class="badge bg-navy text-white" style="background: var(--navy);">Admin</span></td>
+                    <td><span class="badge text-white" style="background: var(--navy);">Admin</span></td>
                     <td>*contact number*</td>
                   </tr>
                   <tr>
