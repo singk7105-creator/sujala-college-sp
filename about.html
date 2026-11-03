@@ -10,9 +10,10 @@
   <link href="https://fonts.googleapis.com/css2?family=Hind:wght@400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./css/style.css">
   <style>
-    /* Clean Table Styling */
+    /* Simple Auto Height & Width Fix */
     .admin-table {
-      width: 100%;
+      width: 100% !important;
+      height: auto !important;
       margin-top: 15px;
       border-collapse: collapse;
       border-radius: 12px;
@@ -23,6 +24,7 @@
       padding: 12px 14px;
       text-align: left;
       font-size: 0.9rem;
+      height: auto;
     }
     .admin-table th {
       background-color: var(--navy);
@@ -32,6 +34,7 @@
     }
     .admin-table tbody tr {
       background-color: #fff;
+      height: auto;
     }
     .admin-table tbody tr:nth-child(even) {
       background-color: var(--cream);
@@ -45,8 +48,8 @@
     }
     .table-responsive {
       width: 100%;
+      height: auto;
       overflow-x: auto;
-      -webkit-overflow-scrolling: touch;
     }
   </style>
 </head>
