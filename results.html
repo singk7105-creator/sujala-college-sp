@@ -126,29 +126,20 @@
     .result-search-clear.show {
       display: block;
     }
-
-    /* =================================
-   HIDE BROWSER DEFAULT SEARCH BUTTONS
-================================= */
-
-/* Webkit (Chrome, Safari, Edge, Opera) */
-.result-search-input::-webkit-search-cancel-button,
-.result-search-input::-webkit-search-decoration,
-.result-search-input::-webkit-search-results-button,
-.result-search-input::-webkit-search-results-decoration {
+    
+    /* Hide browser's default search clear button */
+.result-search-input::-webkit-search-cancel-button {
   -webkit-appearance: none;
   appearance: none;
   display: none;
 }
 
-/* Internet Explorer / Edge legacy */
-.result-search-input::-ms-clear,
-.result-search-input::-ms-reveal {
+.result-search-input::-webkit-search-results-button {
+  -webkit-appearance: none;
+  appearance: none;
   display: none;
-  width: 0;
-  height: 0;
-}
-
+      }
+    
     /* =================================
        RESULT LINK BUTTON
     ================================= */
