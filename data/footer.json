@@ -8,7 +8,7 @@
   ],
   "usefulSections": [
     { "title": "Admissions", "link": "index.html#apps" },
-    { "title": "Results", "link": "index.html#apps" },
+    { "title": "Results", "link": "results.html" },
     { "title": "Exam Updates", "link": "index.html#apps" },
     { "title": "Downloads", "link": "index.html#apps" }
   ]
