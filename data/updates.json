@@ -1,0 +1,34 @@
+[
+  {
+    "category": "Time Table",
+    "date": "31 OCTOBER 2026",
+    "title": "सप्लीमेंट्री परीक्षा के टाइम टेबल जारी",
+    "description": "विश्वविद्यालय द्वारा वार्षिक प्रणाली की सप्लीमेंट्री परीक्षाओं के टाइम टेबल जारी कर दिए हैं।",
+    "link": "contact.html",
+    "icon": "bi-info-circle"
+  },
+  {
+    "category": "ADMISSION",
+    "date": "ADMISSION DESK",
+    "title": "प्रवेश से संबंधित अपडेट",
+    "description": "एडमिशन की अंतिम तिथि, आवेदन प्रक्रिया या मेरिट लिस्ट की जानकारी।",
+    "link": "contact.html",
+    "icon": "bi-mortarboard"
+  },
+  {
+    "category": "ANNOUNCEMENT",
+    "date": "CAMPUS NEWS",
+    "title": "नई घोषणा / कैंपस अपडेट",
+    "description": "कार्यक्रम, परीक्षा या अन्य महत्वपूर्ण घोषणा का विवरण।",
+    "link": "contact.html",
+    "icon": "bi-megaphone"
+  },
+  {
+    "category": "RESULT",
+    "date": "RESULT DESK",
+    "title": "परीक्षा परिणाम अपडेट",
+    "description": "रिजल्ट और री-चेकिंग से संबंधित जानकारी यहाँ प्रकाशित करें।",
+    "link": "contact.html",
+    "icon": "bi-clipboard-check"
+  }
+]
