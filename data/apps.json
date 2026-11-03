@@ -27,7 +27,7 @@
     "title": "Results",
     "description": "परीक्षा परिणाम, री-चेकिंग और रिजल्ट से संबंधित उपयोगी लिंक।",
     "icon": "bi-clipboard2-check",
-    "link": "cont.html"
+    "link": "results.html"
   },
   {
     "title": "Exam & Time Table",
@@ -39,7 +39,7 @@
     "title": "Scholarships",
     "description": "छात्रवृत्ति योजनाएँ, पात्रता, आवेदन और जरूरी दस्तावेजों की जानकारी।",
     "icon": "bi-award",
-    "link": "results.html"
+    "link": "index.html#updates"
   },
   {
     "title": "Forms & Downloads",
