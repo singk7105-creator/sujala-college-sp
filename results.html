@@ -128,6 +128,28 @@
     }
 
     /* =================================
+   HIDE BROWSER DEFAULT SEARCH BUTTONS
+================================= */
+
+/* Webkit (Chrome, Safari, Edge, Opera) */
+.result-search-input::-webkit-search-cancel-button,
+.result-search-input::-webkit-search-decoration,
+.result-search-input::-webkit-search-results-button,
+.result-search-input::-webkit-search-results-decoration {
+  -webkit-appearance: none;
+  appearance: none;
+  display: none;
+}
+
+/* Internet Explorer / Edge legacy */
+.result-search-input::-ms-clear,
+.result-search-input::-ms-reveal {
+  display: none;
+  width: 0;
+  height: 0;
+}
+
+    /* =================================
        RESULT LINK BUTTON
     ================================= */
     .result-link-btn {
