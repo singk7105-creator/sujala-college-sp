@@ -1,0 +1,12 @@
+{
+  "brandName": "Sujala_College",
+  "brandSub": "SUCHNA PORTAL",
+  "logo": "https://i.ibb.co/QFVjHjyb/20260602-104806.jpg",
+  "navLinks": [
+    { "title": "Home", "link": "index.html#home" },
+    { "title": "Our Apps", "link": "index.html#apps" },
+    { "title": "Latest Updates", "link": "index.html#updates" },
+    { "title": "About", "link": "index.html#about" },
+    { "title": "Contact", "link": "contact.html" }
+  ]
+}
