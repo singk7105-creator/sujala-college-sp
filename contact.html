@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="hi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact Us | Sujala College Suchna Portal</title>
+  
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Hind:wght@400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+
+  <!-- Dynamic Navbar -->
+  <nav class="navbar navbar-expand-lg sticky-top" id="mainNavbar">
+    <!-- header.json se load hoga -->
+  </nav>
+
+  <main class="section">
+    <div class="container">
+      <div class="section-heading">
+        <span class="eyebrow">WE'RE HERE TO HELP</span>
+        <h2>Get In Touch</h2>
+        <p>कोई सुझाव, सवाल या जानकारी साझा करनी हो तो हमसे संपर्क करें।</p>
+      </div>
+
+      <div class="row g-4">
+        <!-- Social Channels -->
+        <div class="col-lg-5">
+          <div class="row g-3">
+            <div class="col-12">
+              <div class="contact-card">
+                <div class="contact-icon"><i class="bi bi-telegram"></i></div>
+                <h3>Telegram Channel</h3>
+                <p>नियमित अपडेट्स के लिए हमारे चैनल से जुड़ें।</p>
+                <a href="https://t.me/sujala_college" target="_blank" rel="noopener">t.me/sujala_college <i class="bi bi-arrow-up-right"></i></a>
+              </div>
+            </div>
+            <div class="col-12">
+              <div class="contact-card">
+                <div class="contact-icon"><i class="bi bi-instagram"></i></div>
+                <h3>Instagram</h3>
+                <p>नए पोस्ट, घोषणाएँ और कैंपस अपडेट्स देखें।</p>
+                <a href="https://www.instagram.com/sujala_college/" target="_blank" rel="noopener">@sujala_college <i class="bi bi-arrow-up-right"></i></a>
+              </div>
+            </div>
+            <div class="col-12">
+              <div class="contact-card">
+                <div class="contact-icon"><i class="bi bi-whatsapp"></i></div>
+                <h3>WhatsApp Channel</h3>
+                <p>WhatsApp पर सबसे पहले अपडेट्स पाने के लिए अभी जुड़े।</p>
+                <a href="https://whatsapp.com/channel/0029Va3g5z19RZAfcCguPs15" target="_blank" rel="noopener">Join Whatsapp Channel <i class="bi bi-arrow-up-right"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Active Contact Form -->
+        <div class="col-lg-7">
+          <div class="contact-card">
+            <h3 class="mb-4">Send Us a Message</h3>
+            <form id="contactForm">
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <label class="form-label" for="name">Your Name</label>
+                  <input class="form-control" id="name" name="name" placeholder="अपना नाम लिखें" required>
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label" for="email">Email Address</label>
+                  <input class="form-control" type="email" id="email" name="email" placeholder="name@example.com" required>
+                </div>
+                <div class="col-12">
+                  <label class="form-label" for="subject">Subject</label>
+                  <input class="form-control" id="subject" name="subject" placeholder="संदेश का विषय" required>
+                </div>
+                <div class="col-12">
+                  <label class="form-label" for="message">Message</label>
+                  <textarea class="form-control" id="message" name="message" rows="4" placeholder="अपना संदेश लिखें..." required></textarea>
+                </div>
+                <div class="visually-hidden" aria-hidden="true">
+                  <input id="website" name="website" tabindex="-1" autocomplete="off">
+                </div>
+                <div class="col-12">
+                  <button class="btn btn-brand" id="contactSubmit" type="submit">Send Message <i class="bi bi-send ms-2"></i></button>
+                  <div class="alert mt-3 mb-0 d-none" id="contactStatus" role="status"></div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Dynamic Footer -->
+  <footer>
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-5">
+          <h5>Sujala_College Suchna Portal</h5>
+          <p class="mt-2 mb-3">College & University Updates — All in One Place.</p>
+        </div>
+        <div class="col-6 col-lg-3">
+          <h5>Quick Links</h5>
+          <ul class="list-unstyled lh-lg mt-3" id="footerQuickLinks"></ul>
+        </div>
+        <div class="col-6 col-lg-4">
+          <h5>Useful Sections</h5>
+          <ul class="list-unstyled lh-lg mt-3" id="footerUsefulSections"></ul>
+        </div>
+      </div>
+      <hr class="border-light opacity-25 my-4">
+      <div class="d-flex justify-content-between small">
+        <span>© <span id="year"></span> Sujala_College Suchna Portal.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    // 1. Load Header from header.json
+    async function loadHeader() {
+      try {
+        const res = await fetch('./data/header.json');
+        const data = await res.json();
+        document.getElementById("mainNavbar").innerHTML = `
+          <div class="container">
+            <a class="navbar-brand" href="index.html">
+              <img src="${data.logo}" alt="Logo">
+              <span><span class="brand-name">${data.brandName}</span><br><span class="brand-sub">${data.brandSub}</span></span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mainNav">
+              <ul class="navbar-nav ms-auto align-items-lg-center">
+                ${data.navLinks.map(nav => `<li class="nav-item"><a class="nav-link" href="${nav.link}">${nav.title}</a></li>`).join("")}
+                <li class="nav-item ms-lg-2 mt-2 mt-lg-0"><a class="btn btn-brand btn-sm" href="index.html#apps">Explore Portal <i class="bi bi-arrow-up-right ms-1"></i></a></li>
+              </ul>
+            </div>
+          </div>
+        `;
+      } catch (err) { console.error("Header load error"); }
+    }
+
+    // 2. Load Footer from footer.json
+    async function loadFooter() {
+      try {
+        const res = await fetch('./data/footer.json');
+        const data = await res.json();
+        document.getElementById("footerQuickLinks").innerHTML = data.quickLinks
+          .map(item => `<li><a href="${item.link}">${item.title}</a></li>`).join("");
+        document.getElementById("footerUsefulSections").innerHTML = data.usefulSections
+          .map(item => `<li><a href="${item.link}">${item.title}</a></li>`).join("");
+      } catch (err) { console.error("Footer load error"); }
+    }
+
+    // 3. Contact Form Handler (Google Apps Script)
+    const GOOGLE_SCRIPT_URL = "PASTE_YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL_HERE";
+    const contactForm = document.getElementById("contactForm");
+    const contactStatus = document.getElementById("contactStatus");
+    const contactSubmit = document.getElementById("contactSubmit");
+
+    contactForm.addEventListener("submit", async function (event) {
+      event.preventDefault();
+      if (document.getElementById("website").value.trim() !== "") return;
+      
+      if (!GOOGLE_SCRIPT_URL.startsWith("https://script.google.com/macros/s/")) {
+        contactStatus.className = "alert alert-warning mt-3 mb-0 d-block";
+        contactStatus.textContent = "Please set Google Apps Script URL first.";
+        return;
+      }
+
+      contactSubmit.disabled = true;
+      contactSubmit.innerHTML = 'Sending...';
+      
+      const payload = new URLSearchParams({
+        name: document.getElementById("name").value.trim(),
+        email: document.getElementById("email").value.trim(),
+        subject: document.getElementById("subject").value.trim(),
+        message: document.getElementById("message").value.trim()
+      });
+
+      try {
+        await fetch(GOOGLE_SCRIPT_URL, { method: "POST", mode: "no-cors", body: payload });
+        contactStatus.className = "alert alert-success mt-3 mb-0 d-block";
+        contactStatus.textContent = "आपका संदेश सफलतापूर्वक भेज दिया गया है।";
+        contactForm.reset();
+      } catch (error) {
+        contactStatus.className = "alert alert-danger mt-3 mb-0 d-block";
+        contactStatus.textContent = "संदेश भेजने में समस्या आई। कृपया पुनः प्रयास करें।";
+      } finally {
+        contactSubmit.disabled = false;
+        contactSubmit.innerHTML = 'Send Message <i class="bi bi-send ms-2"></i>';
+      }
+    });
+
+    loadHeader();
+    loadFooter();
+  </script>
+</body>
+</html>
