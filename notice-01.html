@@ -1,34 +1,92 @@
+
 <!doctype html>
 <html lang="hi">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
   <title>Supplementary Time Table 2026 | Sujala College Suchna Portal</title>
-  
+
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Hind:wght@400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="./css/style.css">
-  
+
   <style>
-    .notice-hero {
-      background: linear-gradient(135deg, var(--navy) 0%, #0a2a6c 100%);
-      color: #fff;
-      padding: 40px 0;
-      border-bottom: 4px solid var(--orange);
-      border-radius: 0 0 24px 24px;
-      margin-bottom: 30px;
+    /* Notice Page Heading */
+    .notice-heading-section {
+      padding: 35px 0 65px;
+      background: transparent;
+      text-align: center;
     }
+
+    .notice-back {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      color: var(--navy);
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 600;
+      border: 1px solid var(--line);
+      padding: 7px 15px;
+      border-radius: 30px;
+      transition: all 0.3s ease;
+    }
+
+    .notice-back:hover {
+      background: var(--navy);
+      color: #fff;
+      border-color: var(--navy);
+    }
+
+    .notice-top-row {
+      text-align: left;
+      margin-bottom: 25px;
+    }
+
+    .notice-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(255, 121, 0, 0.10);
+      color: var(--orange);
+      font-family: 'Poppins', sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      padding: 7px 14px;
+      border-radius: 30px;
+      margin-bottom: 12px;
+    }
+
+    .notice-page-title {
+      color: var(--navy);
+      font-family: 'Hind', sans-serif;
+      font-weight: 700;
+      font-size: 30px;
+      line-height: 1.4;
+      margin-bottom: 8px;
+    }
+
+    .notice-date {
+      color: #8a94a6;
+      font-size: 12px;
+      margin: 0;
+    }
+
+    /* Main Notice Container */
     .notice-container-card {
       background: #fff;
       border-radius: 20px;
       border: 1px solid var(--line);
       box-shadow: 0 10px 30px rgba(6, 27, 73, 0.05);
       overflow: hidden;
-      margin-top: -50px;
+      margin-top: 0;
+      margin-bottom: 55px;
       position: relative;
-      z-index: 2;
     }
+
     .notice-img-wrap {
       background: var(--cream);
       border-radius: 14px;
@@ -36,24 +94,45 @@
       padding: 15px;
       text-align: center;
     }
+
     .notice-img-wrap img {
       max-height: 420px;
       width: 100%;
       object-fit: contain;
       border-radius: 10px;
     }
-    .stylish-badge {
-      background-color: rgba(255, 121, 0, 0.1);
-      color: var(--orange);
-      font-weight: 600;
-      padding: 6px 14px;
-      border-radius: 30px;
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
+
+    /* Responsive */
+    @media (max-width: 576px) {
+      .notice-heading-section {
+        padding: 25px 0 35px;
+      }
+
+      .notice-top-row {
+        margin-bottom: 22px;
+      }
+
+      .notice-page-title {
+        font-size: 24px;
+      }
+
+      .notice-container-card {
+        padding: 20px !important;
+        border-radius: 17px;
+        margin-bottom: 35px;
+      }
+
+      .notice-img-wrap {
+        padding: 10px;
+      }
+
+      .notice-img-wrap img {
+        max-height: 350px;
+      }
     }
   </style>
 </head>
+
 <body>
 
   <!-- Dynamic Navbar -->
@@ -61,140 +140,374 @@
     <!-- header.json se load hoga -->
   </nav>
 
-  <!-- Stylish Header Section -->
-  <header class="notice-hero">
-    <div class="container">
-      <div class="row align-items-center">
-        <div class="col-lg-8">
-          <a href="index.html#updates" class="btn btn-outline-light btn-sm mb-3 rounded-pill px-3">
-            <i class="bi bi-arrow-left me-1"></i> Back to Home
-          </a>
-          <span class="stylish-badge mb-2"><i class="bi bi-bookmark-fill"></i> Official Time Table Update</span>
-          <h1 class="fw-bold fs-2 text-white font-poppins">सप्लीमेंट्री परीक्षा के टाइम टेबल जारी</h1>
-          <p class="text-white-50 mb-0 small"><i class="bi bi-calendar-event me-1 text-orange"></i> Declared On: 31 October 2026</p>
-        </div>
-      </div>
-    </div>
-  </header>
 
-  <main class="container mb-5">
+  <!-- Notice Heading Section -->
+  <section class="notice-heading-section">
+
+    <div class="container">
+
+      <!-- Back To Home -->
+      <div class="notice-top-row">
+        <a href="index.html#updates" class="notice-back">
+          <i class="bi bi-arrow-left"></i>
+          Back to Home
+        </a>
+      </div>
+
+      <!-- Center Heading -->
+      <div class="notice-heading-content">
+
+        <span class="notice-label">
+          <i class="bi bi-bookmark-fill"></i>
+          OFFICIAL TIME TABLE UPDATE
+        </span>
+
+        <h1 class="notice-page-title">
+          सप्लीमेंट्री परीक्षा के टाइम टेबल जारी
+        </h1>
+
+        <p class="notice-date">
+          <i class="bi bi-calendar-event me-1"></i>
+          Declared On: 31 October 2026
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- Main Content -->
+  <main class="container mb-4">
+
     <div class="row justify-content-center">
+
       <div class="col-lg-10">
-        
+
         <div class="notice-container-card p-4 p-md-5">
-          
-          <!-- Notice Poster / Image Section -->
+
+          <!-- Notice Poster -->
           <div class="notice-img-wrap mb-4">
-            <img src="https://i.ibb.co/QFVjHjyb/20260602-104806.jpg" alt="Notice Poster" class="img-fluid shadow-sm">
+
+            <img
+              src="https://i.ibb.co/QFVjHjyb/20260602-104806.jpg"
+              alt="Supplementary Examination Time Table Notice"
+              class="img-fluid shadow-sm">
+
           </div>
 
+
           <!-- Main Details -->
-          <h3 class="fw-bold text-navy mb-3 fs-4"><i class="bi bi-info-circle-fill text-orange me-2"></i>Soochna Ka Poora Vivran</h3>
+          <h3 class="fw-bold text-navy mb-3 fs-4">
+
+            <i class="bi bi-info-circle-fill text-orange me-2"></i>
+            Soochna Ka Poora Vivran
+
+          </h3>
+
           <p class="text-secondary lh-lg">
-            विश्वविद्यालय द्वारा वार्षिक परीक्षा प्रणाली के अंतर्गत आयोजित होने वाली सप्लीमेंट्री परीक्षाओं की समय सारणी (Time Table) अधिकारिक पोर्टल पर जारी कर दी गई है। सभी संबंधित छात्र-छात्राएं नीचे दिए गए लिंक से अपना टाइम टेबल डाउनलोड कर परीक्षा तिथियों की जांच कर सकते हैं।
+
+            विश्वविद्यालय द्वारा वार्षिक परीक्षा प्रणाली के अंतर्गत आयोजित होने वाली सप्लीमेंट्री परीक्षाओं की समय सारणी (Time Table) आधिकारिक पोर्टल पर जारी कर दी गई है। सभी संबंधित छात्र-छात्राएं नीचे दिए गए लिंक से अपना टाइम टेबल डाउनलोड कर परीक्षा तिथियों की जांच कर सकते हैं।
+
           </p>
+
           <p class="text-secondary lh-lg mb-4">
+
             किसी भी प्रकार की असुविधा होने पर छात्र महाविद्यालय के परीक्षा विभाग से संपर्क कर सकते हैं। समय पर अपनी तैयारी पूरी रखें।
+
           </p>
+
 
           <!-- Download Action Box -->
           <div class="p-4 rounded-4 bg-light border d-flex flex-wrap align-items-center justify-content-between gap-3">
+
             <div>
-              <h5 class="fw-bold text-navy mb-1">Download Official PDF</h5>
-              <p class="text-muted small mb-0">Original time-table document ko seedha download karein.</p>
+
+              <h5 class="fw-bold text-navy mb-1">
+                Download Official PDF
+              </h5>
+
+              <p class="text-muted small mb-0">
+                Original time-table document ko seedha download karein.
+              </p>
+
             </div>
+
             <div class="d-flex gap-2">
-              <a href="#" target="_blank" class="btn btn-brand text-white px-4 py-2 fw-semibold shadow-sm" style="background: var(--orange);">
-                <i class="bi bi-download me-2"></i> Download PDF
+
+              <a
+                href="#"
+                target="_blank"
+                rel="noopener"
+                class="btn btn-brand text-white px-4 py-2 fw-semibold shadow-sm"
+                style="background: var(--orange);">
+
+                <i class="bi bi-download me-2"></i>
+                Download PDF
+
               </a>
-              <a href="index.html" class="btn btn-outline-secondary px-3 py-2">
-                Home
-              </a>
+
             </div>
+
           </div>
 
         </div>
 
       </div>
+
     </div>
+
   </main>
+
 
   <!-- Dynamic Footer -->
   <footer>
+
     <div class="container">
+
       <div class="row g-4">
+
         <div class="col-lg-4">
+
           <h5>Sujala_College Suchna Portal</h5>
-          <p class="mt-2 mb-3">College & University Updates — All in One Place.<br>आपका Digital Mitrr.</p>
+
+          <p class="mt-2 mb-3">
+            College & University Updates — All in One Place.<br>
+            आपका Digital Mitrr.
+          </p>
+
           <div class="mt-3" id="footerSocialLinks"></div>
+
         </div>
+
+
         <div class="col-6 col-lg-4">
+
           <h5>Quick Links</h5>
+
           <ul class="list-unstyled lh-lg mt-3" id="footerQuickLinks"></ul>
+
         </div>
+
+
         <div class="col-6 col-lg-4">
+
           <h5>Useful Sections</h5>
+
           <ul class="list-unstyled lh-lg mt-3" id="footerUsefulSections"></ul>
+
         </div>
+
       </div>
+
+
       <hr class="border-light opacity-25 my-4">
+
+
       <div class="d-flex justify-content-between small">
-        <span>© <span id="year"></span> Sujala_College Suchna Portal. All Rights Reserved.</span>
+
+        <span>
+          © <span id="year"></span> Sujala_College Suchna Portal. All Rights Reserved.
+        </span>
+
       </div>
+
     </div>
+
   </footer>
 
-  <button class="back-top" id="backTop" aria-label="Back to top"><i class="bi bi-arrow-up"></i></button>
 
+  <!-- Back To Top -->
+  <button class="back-top" id="backTop" aria-label="Back to top">
+    <i class="bi bi-arrow-up"></i>
+  </button>
+
+
+  <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+
   <script>
+
+    // Current Year
     document.getElementById("year").textContent = new Date().getFullYear();
 
+
+    // Back To Top
     const backTop = document.getElementById("backTop");
-    window.addEventListener("scroll", () => backTop.classList.toggle("show", window.scrollY > 450));
-    backTop.addEventListener("click", () => window.scrollTo({ top: 0, behavior: "smooth" }));
 
+    window.addEventListener("scroll", () => {
+      backTop.classList.toggle("show", window.scrollY > 450);
+    });
+
+    backTop.addEventListener("click", () => {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      });
+    });
+
+
+    // Load Header
     async function loadHeader() {
+
       try {
+
         const res = await fetch('./data/header.json');
+
+        if (!res.ok) throw new Error("Header not found");
+
         const data = await res.json();
+
         document.getElementById("mainNavbar").innerHTML = `
+
           <div class="container">
+
             <a class="navbar-brand" href="index.html">
+
               <img src="${data.logo}" alt="Logo">
-              <span><span class="brand-name">${data.brandName}</span><br><span class="brand-sub">${data.brandSub}</span></span>
+
+              <span>
+                <span class="brand-name">${data.brandName}</span><br>
+                <span class="brand-sub">${data.brandSub}</span>
+              </span>
+
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+
+
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#mainNav"
+              aria-controls="mainNav"
+              aria-expanded="false"
+              aria-label="Toggle navigation">
+
               <span class="navbar-toggler-icon"></span>
+
             </button>
+
+
             <div class="collapse navbar-collapse" id="mainNav">
+
               <ul class="navbar-nav ms-auto align-items-lg-center">
-                ${data.navLinks.map(nav => `<li class="nav-item"><a class="nav-link" href="${nav.link}">${nav.title}</a></li>`).join("")}
-                <li class="nav-item ms-lg-2 mt-2 mt-lg-0"><a class="btn btn-brand btn-sm" href="index.html#apps">Explore Portal <i class="bi bi-arrow-up-right ms-1"></i></a></li>
+
+                ${data.navLinks.map(nav => `
+
+                  <li class="nav-item">
+                    <a class="nav-link" href="${nav.link}">
+                      ${nav.title}
+                    </a>
+                  </li>
+
+                `).join("")}
+
+
+                <li class="nav-item ms-lg-2 mt-2 mt-lg-0">
+
+                  <a class="btn btn-brand btn-sm" href="index.html#apps">
+
+                    Explore Portal
+                    <i class="bi bi-arrow-up-right ms-1"></i>
+
+                  </a>
+
+                </li>
+
               </ul>
+
             </div>
+
           </div>
+
         `;
-      } catch (err) { console.error("Header load error"); }
+
+      } catch (err) {
+
+        console.error("Header load error:", err);
+
+      }
+
     }
 
+
+
+    // Load Footer
     async function loadFooter() {
+
       try {
+
         const res = await fetch('./data/footer.json');
+
+        if (!res.ok) throw new Error("Footer not found");
+
         const data = await res.json();
-        document.getElementById("footerQuickLinks").innerHTML = data.quickLinks
-          .map(item => `<li><a href="${item.link}">${item.title}</a></li>`).join("");
-        document.getElementById("footerUsefulSections").innerHTML = data.usefulSections
-          .map(item => `<li><a href="${item.link}">${item.title}</a></li>`).join("");
-        if(data.socialLinks && document.getElementById("footerSocialLinks")) {
-          document.getElementById("footerSocialLinks").innerHTML = data.socialLinks
-            .map(s => `<a class="style-link" href="${s.link}" target="_blank" rel="noopener"><i class="bi ${s.icon}"></i></a>`).join("");
+
+
+        document.getElementById("footerQuickLinks").innerHTML =
+
+          data.quickLinks.map(item => `
+
+            <li>
+              <a href="${item.link}">
+                ${item.title}
+              </a>
+            </li>
+
+          `).join("");
+
+
+
+        document.getElementById("footerUsefulSections").innerHTML =
+
+          data.usefulSections.map(item => `
+
+            <li>
+              <a href="${item.link}">
+                ${item.title}
+              </a>
+            </li>
+
+          `).join("");
+
+
+
+        if (data.socialLinks) {
+
+          document.getElementById("footerSocialLinks").innerHTML =
+
+            data.socialLinks.map(s => `
+
+              <a
+                class="style-link"
+                href="${s.link}"
+                target="_blank"
+                rel="noopener">
+
+                <i class="bi ${s.icon}"></i>
+
+              </a>
+
+            `).join("");
+
         }
-      } catch (err) { console.error("Footer load error"); }
+
+      } catch (err) {
+
+        console.error("Footer load error:", err);
+
+      }
+
     }
 
+
+    // Initialize
     loadHeader();
     loadFooter();
+
   </script>
+
 </body>
 </html>
