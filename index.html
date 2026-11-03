@@ -225,7 +225,7 @@
       `).join("");
 
       btn.hidden = quickUpdates.length <= 3;
-      btn.innerHTML = showAllUpdates ? 'Show Less' : 'Show All Updates';
+      btn.innerHTML = showAllUpdates ? 'Show Less  <i class="bi bi-arrow-up ms-1>' : 'Show All Updates  <i class="bi bi-arrow-right ms-1>';
     }
 
     document.getElementById("showAllUpdates").addEventListener("click", () => {
