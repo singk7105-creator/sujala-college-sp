@@ -6,6 +6,7 @@
     { "title": "Home", "link": "index.html#home" },
     { "title": "Our Apps", "link": "index.html#apps" },
     { "title": "Latest Updates", "link": "index.html#updates" },
+    { "title": "Our Apps", "link": "index.html#apps" },
     { "title": "About", "link": "about.html" },
     { "title": "Contact", "link": "contact.html" }
   ]
