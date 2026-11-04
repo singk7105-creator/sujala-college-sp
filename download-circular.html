@@ -119,6 +119,19 @@
       border-color: var(--orange);
       box-shadow: 0 0 0 3px rgba(255, 121, 0, 0.10);
     }
+    
+/* =================================
+   DOWNLOAD COUNT INFORMATION
+================================= */
+
+.download-info {
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 600;
+  margin-top: 12px;
+  margin-bottom: 12px;
+  text-align: left;
+}
 
     /* SHOW MORE BUTTON */
     .show-more-btn {
@@ -218,6 +231,11 @@
                 placeholder="Search circular, category or date..."
                 autocomplete="off"
                 aria-label="Search downloads and circulars">
+            </div>
+
+            <!-- DOWNLOAD COUNT INFO -->
+            <div class="download-info" id="downloadInfo" aria-live="polite">
+              Documents load ho rahe hain...
             </div>
 
             <!-- RESULTS TABLE -->
