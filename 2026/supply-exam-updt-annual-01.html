@@ -238,13 +238,6 @@
             <img src="https://i.ibb.co/QFVjHjyb/20260602-104806.jpg" alt="Supplementary Examination Time Table Notice" class="img-fluid shadow-sm">
           </div>
 
-          <!-- Main Details Heading *Off*
-          <h3 class="fw-bold text-navy mb-3 fs-4">
-            <i class="bi bi-info-circle-fill text-orange me-2"></i>
-            Soochna Ka Poora Vivran
-          </h3>
-          -->
-
           <!-- Notice Description -->
           <p class="text-secondary lh-lg">
             विश्वविद्यालय द्वारा स्नातक स्तर (वार्षिक परीक्षा प्रणाली) के अंतर्गत आयोजित होने वाली सप्लीमेंट्री परीक्षाओं की समय सारणी (Time Table) आधिकारिक पोर्टल पर जारी कर दी गई है। सभी संबंधित छात्र-छात्राएं नीचे दिए गए लिंक से अपना टाइम टेबल डाउनलोड कर परीक्षा तिथियों की जांच कर सकते हैं।
@@ -319,7 +312,7 @@
         <span>
           © <span id="year"></span> Sujala_College Suchna Portal. All Rights Reserved.
         </span>
-        <span>Design with  🧡  for students.</span>
+        <span>Design with 🧡 for students.</span>
       </div>
     </div>
   </footer>
@@ -356,134 +349,126 @@
       });
     });
 
-// Load Header
-async function loadHeader() {
-  try {
-    const res = await fetch('../data/header.json');
-    if (!res.ok) throw new Error("Header not found");
+    // Load Header
+    async function loadHeader() {
+      try {
+        const res = await fetch('../data/header.json');
+        if (!res.ok) throw new Error("Header not found");
 
-    const data = await res.json();
+        const data = await res.json();
 
-    // Fix Internal Navigation Links
-    const fixLink = (link) => {
-      if (!link) return '../index.html';
+        // Fix Internal Navigation Links
+        const fixLink = (link) => {
+          if (!link) return '../index.html';
 
-      // External links and special links remain unchanged
-      if (
-        /^(https?:|mailto:|tel:|#|javascript:)/i.test(link) ||
-        link.startsWith('/')
-      ) {
-        return link;
+          if (
+            /^(https?:|mailto:|tel:|#|javascript:)/i.test(link) ||
+            link.startsWith('/')
+          ) {
+            return link;
+          }
+
+          return '../' + link.replace(/^\.?\//, '');
+        };
+
+        document.getElementById("mainNavbar").innerHTML = `
+          <div class="container">
+            <a class="navbar-brand" href="../index.html">
+              <img src="${data.logo}" alt="Logo">
+              <span>
+                <span class="brand-name">${data.brandName}</span><br>
+                <span class="brand-sub">${data.brandSub}</span>
+              </span>
+            </a>
+
+            <button class="navbar-toggler" type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#mainNav"
+              aria-controls="mainNav"
+              aria-expanded="false"
+              aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="mainNav">
+              <ul class="navbar-nav ms-auto align-items-lg-center">
+                ${data.navLinks.map(nav => `
+                  <li class="nav-item">
+                    <a class="nav-link" href="${fixLink(nav.link)}">
+                      ${nav.title}
+                    </a>
+                  </li>
+                `).join("")}
+
+                <li class="nav-item ms-lg-2 mt-2 mt-lg-0">
+                  <a class="btn btn-brand btn-sm" href="../index.html#apps">
+                    Explore Portal
+                    <i class="bi bi-arrow-up-right ms-1"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        `;
+      } catch (err) {
+        console.error("Header load error:", err);
       }
-
-      // Internal links point to the main website root
-      return '../' + link.replace(/^\.?\//, '');
-    };
-
-    document.getElementById("mainNavbar").innerHTML = `
-      <div class="container">
-
-        <a class="navbar-brand" href="../index.html">
-          <img src="${data.logo}" alt="Logo">
-          <span>
-            <span class="brand-name">${data.brandName}</span><br>
-            <span class="brand-sub">${data.brandSub}</span>
-          </span>
-        </a>
-
-        <button class="navbar-toggler" type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#mainNav"
-          aria-controls="mainNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation">
-
-          <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse" id="mainNav">
-          <ul class="navbar-nav ms-auto align-items-lg-center">
-
-            ${data.navLinks.map(nav => `
-              <li class="nav-item">
-                <a class="nav-link" href="${fixLink(nav.link)}">
-                  ${nav.title}
-                </a>
-              </li>
-            `).join("")}
-
-            <li class="nav-item ms-lg-2 mt-2 mt-lg-0">
-              <a class="btn btn-brand btn-sm" href="../index.html#apps">
-                Explore Portal
-                <i class="bi bi-arrow-up-right ms-1"></i>
-              </a>
-            </li>
-
-          </ul>
-        </div>
-      </div>
-    `;
-
-  } catch (err) {
-    console.error("Header load error:", err);
-  }
-}
-
-// Load Footer
-async function loadFooter() {
-  try {
-    const res = await fetch('../data/footer.json');
-    if (!res.ok) throw new Error("Footer not found");
-
-    const data = await res.json();
-
-    // Fix Internal Footer Links
-    const fixLink = (link) => {
-      if (!link) return '../index.html';
-
-      if (
-        /^(https?:|mailto:|tel:|#|javascript:)/i.test(link) ||
-        link.startsWith('/')
-      ) {
-        return link;
-      }
-
-      return '../' + link.replace(/^\.?\//, '');
-    };
-
-    // Quick Links
-    document.getElementById("footerQuickLinks").innerHTML =
-      data.quickLinks.map(item => `
-        <li>
-          <a href="${fixLink(item.link)}">${item.title}</a>
-        </li>
-      `).join("");
-
-    // Useful Sections
-    document.getElementById("footerUsefulSections").innerHTML =
-      data.usefulSections.map(item => `
-        <li>
-          <a href="${fixLink(item.link)}">${item.title}</a>
-        </li>
-      `).join("");
-
-    // Social Links
-    if (data.socialLinks) {
-      document.getElementById("footerSocialLinks").innerHTML =
-        data.socialLinks.map(s => `
-          <a class="style-link"
-             href="${s.link}"
-             target="_blank"
-             rel="noopener">
-            <i class="bi ${s.icon}"></i>
-          </a>
-        `).join("");
     }
 
-  } catch (err) {
-    console.error("Footer load error:", err);
-  }
-}
+    // Load Footer
+    async function loadFooter() {
+      try {
+        const res = await fetch('../data/footer.json');
+        if (!res.ok) throw new Error("Footer not found");
+
+        const data = await res.json();
+
+        // Fix Internal Footer Links
+        const fixLink = (link) => {
+          if (!link) return '../index.html';
+
+          if (
+            /^(https?:|mailto:|tel:|#|javascript:)/i.test(link) ||
+            link.startsWith('/')
+          ) {
+            return link;
+          }
+
+          return '../' + link.replace(/^\.?\//, '');
+        };
+
+        // Quick Links
+        document.getElementById("footerQuickLinks").innerHTML =
+          data.quickLinks.map(item => `
+            <li>
+              <a href="${fixLink(item.link)}">${item.title}</a>
+            </li>
+          `).join("");
+
+        // Useful Sections
+        document.getElementById("footerUsefulSections").innerHTML =
+          data.usefulSections.map(item => `
+            <li>
+              <a href="${fixLink(item.link)}">${item.title}</a>
+            </li>
+          `).join("");
+
+        // Social Links
+        if (data.socialLinks) {
+          document.getElementById("footerSocialLinks").innerHTML =
+            data.socialLinks.map(s => `
+              <a class="style-link"
+                 href="${s.link}"
+                 target="_blank"
+                 rel="noopener">
+                <i class="bi ${s.icon}"></i>
+              </a>
+            `).join("");
+        }
+      } catch (err) {
+        console.error("Footer load error:", err);
+      }
+    }
 
     // Initialize Page
     loadHeader();
