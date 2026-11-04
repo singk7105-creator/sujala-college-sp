@@ -1,6 +1,6 @@
 {
   "quickLinks": [
-    { "title": "Home", "link": "index.html#home" },
+    { "title": "Home", "link": "index.html" },
     { "title": "Our Apps", "link": "index.html#apps" },
     { "title": "Updates", "link": "index.html#updates" },
     { "title": "About Us", "link": "about.html" },
@@ -10,6 +10,6 @@
     { "title": "Admissions", "link": "index.html#apps" },
     { "title": "Results", "link": "results.html" },
     { "title": "Exam Updates", "link": "index.html#apps" },
-    { "title": "Downloads", "link": "index.html#apps" }
+    { "title": "Downloads", "link": "download-circular.html" }
   ]
 }
