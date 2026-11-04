@@ -1,213 +1,30 @@
-
 [
   {
-    "title": "Annual Examination 2026 - Time Table",
+    "title": "B.A. HONS GEO 3rd Supply Exam 2026",
     "category": "Examination",
-    "date": "04 November 2026",
-    "description": "वार्षिक परीक्षा की समय सारणी",
-    "fileUrl": "./assets/downloads/annual-timetable-2026.pdf"
-  },
-  {
-    "title": "Supplementary Examination 2026 - Time Table",
-    "category": "Examination",
-    "date": "03 November 2026",
+    "date": "31 OCTOBER 2026",
     "description": "पूरक परीक्षा की समय सारणी",
-    "fileUrl": "./assets/downloads/supplementary-timetable-2026.pdf"
+    "fileUrl": "https://univindia.net/MGSU/time-table-2026/includes/uploads/B%20A%20IIIrd%20Hons%20Geography%20Supp%20Exam%202026.pdf"
   },
   {
-    "title": "NEP Panel Email Verification Notice",
-    "category": "University Notice",
-    "date": "02 November 2026",
-    "description": "ईमेल सत्यापन संबंधी सूचना",
-    "fileUrl": "./assets/downloads/nep-email-verification.pdf"
-  },
-  {
-    "title": "UG Semester Examination Guidelines",
+    "title": "B.A. 3rd Supply Exam 2026",
     "category": "Examination",
-    "date": "01 November 2026",
-    "description": "सेमेस्टर परीक्षा दिशा-निर्देश",
-    "fileUrl": "./assets/downloads/ug-exam-guidelines.pdf"
+    "date": "31 OCTOBER 2026",
+    "description": "पूरक परीक्षा की समय सारणी",
+    "fileUrl": "https://univindia.net/MGSU/time-table-2026/includes/uploads/B%20A%20IIIrd%20Supp%20Exam%202026.pdf"
   },
   {
-    "title": "College Admission Guidelines 2026",
-    "category": "Admission",
-    "date": "30 October 2026",
-    "description": "प्रवेश प्रक्रिया दिशा-निर्देश",
-    "fileUrl": "./assets/downloads/admission-guidelines.pdf"
-  },
-  {
-    "title": "Scholarship Application Notice",
-    "category": "Scholarship",
-    "date": "29 October 2026",
-    "description": "छात्रवृत्ति आवेदन सूचना",
-    "fileUrl": "./assets/downloads/scholarship-notice.pdf"
-  },
-  {
-    "title": "UG First Semester Syllabus",
-    "category": "Syllabus",
-    "date": "28 October 2026",
-    "description": "प्रथम सेमेस्टर पाठ्यक्रम",
-    "fileUrl": "./assets/downloads/ug-first-semester-syllabus.pdf"
-  },
-  {
-    "title": "UG Third Semester Syllabus",
-    "category": "Syllabus",
-    "date": "27 October 2026",
-    "description": "तृतीय सेमेस्टर पाठ्यक्रम",
-    "fileUrl": "./assets/downloads/ug-third-semester-syllabus.pdf"
-  },
-  {
-    "title": "UG Fifth Semester Syllabus",
-    "category": "Syllabus",
-    "date": "26 October 2026",
-    "description": "पंचम सेमेस्टर पाठ्यक्रम",
-    "fileUrl": "./assets/downloads/ug-fifth-semester-syllabus.pdf"
-  },
-  {
-    "title": "Examination Form Instructions",
+    "title": "B.Com. 3rd Supply Exam 2026",
     "category": "Examination",
-    "date": "25 October 2026",
-    "description": "परीक्षा आवेदन संबंधी निर्देश",
-    "fileUrl": "./assets/downloads/exam-form-instructions.pdf"
+    "date": "31 OCTOBER 2026",
+    "description": "पूरक परीक्षा की समय सारणी",
+    "fileUrl": "https://univindia.net/MGSU/time-table-2026/includes/uploads/B%20Com%20IIIrd%20Supp%20Exam%202026.pdf"
   },
   {
-    "title": "Internal Assessment Guidelines",
+    "title": "B.Sc. 3rd Supply Exam 2026",
     "category": "Examination",
-    "date": "24 October 2026",
-    "description": "आंतरिक मूल्यांकन दिशा-निर्देश",
-    "fileUrl": "./assets/downloads/internal-assessment.pdf"
+    "date": "31 OCTOBER 2026",
+    "description": "पूरक परीक्षा की समय सारणी",
+    "fileUrl": "https://univindia.net/MGSU/time-table-2026/includes/uploads/B%20Sc%20IIIrd%20Supp%20Exam%202026.pdf"
   },
-  {
-    "title": "Practical Examination Notice",
-    "category": "Examination",
-    "date": "23 October 2026",
-    "description": "प्रायोगिक परीक्षा सूचना",
-    "fileUrl": "./assets/downloads/practical-exam-notice.pdf"
-  },
-  {
-    "title": "University Academic Calendar 2026",
-    "category": "University Notice",
-    "date": "22 October 2026",
-    "description": "शैक्षणिक कैलेंडर",
-    "fileUrl": "./assets/downloads/academic-calendar-2026.pdf"
-  },
-  {
-    "title": "Migration Certificate Guidelines",
-    "category": "Student Documents",
-    "date": "21 October 2026",
-    "description": "माइग्रेशन प्रमाण पत्र दिशा-निर्देश",
-    "fileUrl": "./assets/downloads/migration-guidelines.pdf"
-  },
-  {
-    "title": "Transfer Certificate Information",
-    "category": "Student Documents",
-    "date": "20 October 2026",
-    "description": "स्थानांतरण प्रमाण पत्र जानकारी",
-    "fileUrl": "./assets/downloads/tc-information.pdf"
-  },
-  {
-    "title": "Character Certificate Application",
-    "category": "Student Documents",
-    "date": "19 October 2026",
-    "description": "चरित्र प्रमाण पत्र आवेदन",
-    "fileUrl": "./assets/downloads/character-certificate.pdf"
-  },
-  {
-    "title": "Revaluation Application Guidelines",
-    "category": "Examination",
-    "date": "18 October 2026",
-    "description": "पुनर्मूल्यांकन आवेदन निर्देश",
-    "fileUrl": "./assets/downloads/revaluation-guidelines.pdf"
-  },
-  {
-    "title": "Answer Book Copy Application",
-    "category": "Examination",
-    "date": "17 October 2026",
-    "description": "उत्तर पुस्तिका प्रति आवेदन",
-    "fileUrl": "./assets/downloads/answer-book-copy.pdf"
-  },
-  {
-    "title": "Student Identity Card Notice",
-    "category": "Student Notice",
-    "date": "16 October 2026",
-    "description": "विद्यार्थी पहचान पत्र सूचना",
-    "fileUrl": "./assets/downloads/student-id-card.pdf"
-  },
-  {
-    "title": "Anti Ragging Undertaking Guidelines",
-    "category": "Student Notice",
-    "date": "15 October 2026",
-    "description": "एंटी रैगिंग शपथ पत्र निर्देश",
-    "fileUrl": "./assets/downloads/anti-ragging.pdf"
-  },
-  {
-    "title": "Library Membership Form",
-    "category": "Forms",
-    "date": "14 October 2026",
-    "description": "पुस्तकालय सदस्यता फॉर्म",
-    "fileUrl": "./assets/downloads/library-form.pdf"
-  },
-  {
-    "title": "Student Feedback Form",
-    "category": "Forms",
-    "date": "13 October 2026",
-    "description": "विद्यार्थी फीडबैक फॉर्म",
-    "fileUrl": "./assets/downloads/feedback-form.pdf"
-  },
-  {
-    "title": "Hostel Admission Form",
-    "category": "Forms",
-    "date": "12 October 2026",
-    "description": "छात्रावास प्रवेश फॉर्म",
-    "fileUrl": "./assets/downloads/hostel-form.pdf"
-  },
-  {
-    "title": "NSS Enrollment Notice",
-    "category": "Student Notice",
-    "date": "11 October 2026",
-    "description": "NSS नामांकन सूचना",
-    "fileUrl": "./assets/downloads/nss-enrollment.pdf"
-  },
-  {
-    "title": "NCC Enrollment Notice",
-    "category": "Student Notice",
-    "date": "10 October 2026",
-    "description": "NCC नामांकन सूचना",
-    "fileUrl": "./assets/downloads/ncc-enrollment.pdf"
-  },
-  {
-    "title": "University Holiday Calendar",
-    "category": "University Notice",
-    "date": "09 October 2026",
-    "description": "विश्वविद्यालय अवकाश कैलेंडर",
-    "fileUrl": "./assets/downloads/holiday-calendar.pdf"
-  },
-  {
-    "title": "Examination Centre Instructions",
-    "category": "Examination",
-    "date": "08 October 2026",
-    "description": "परीक्षा केंद्र संबंधी निर्देश",
-    "fileUrl": "./assets/downloads/exam-centre-instructions.pdf"
-  },
-  {
-    "title": "Practical File Submission Notice",
-    "category": "Examination",
-    "date": "07 October 2026",
-    "description": "प्रायोगिक फाइल जमा सूचना",
-    "fileUrl": "./assets/downloads/practical-file.pdf"
-  },
-  {
-    "title": "Scholarship Renewal Guidelines",
-    "category": "Scholarship",
-    "date": "06 October 2026",
-    "description": "छात्रवृत्ति नवीनीकरण निर्देश",
-    "fileUrl": "./assets/downloads/scholarship-renewal.pdf"
-  },
-  {
-    "title": "College Student Welfare Notice",
-    "category": "Student Notice",
-    "date": "05 October 2026",
-    "description": "विद्यार्थी कल्याण सूचना",
-    "fileUrl": "./assets/downloads/student-welfare.pdf"
-  }
 ]
