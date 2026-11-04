@@ -33,7 +33,7 @@
     "title": "Exam & Time Table",
     "description": "परीक्षा कार्यक्रम, टाइम टेबल, प्रैक्टिकल और अन्य शेड्यूल।",
     "icon": "bi-calendar3",
-    "link": "contact.html"
+    "link": "download-circular.html"
   },
   {
     "title": "Scholarships",
@@ -45,6 +45,6 @@
     "title": "Forms & Downloads",
     "description": "आवश्यक Form, आवेदन दस्तावेज और उपयोगी डाउनलोड लिंक।",
     "icon": "bi-cloud-arrow-down",
-    "link": "contact.html"
+    "link": "download-circular.html"
   }
 ]
