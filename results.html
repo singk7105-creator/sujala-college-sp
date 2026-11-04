@@ -152,6 +152,24 @@
       color: #ffffff !important;
     }
 
+    /* Remove browser default search clear icon */
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+  -webkit-appearance: none !important;
+  appearance: none !important;
+  display: none !important;
+}
+
+/* Remove custom circular clear button */
+#clearSearch,
+.result-search-clear {
+  display: none !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+}
+
     /* =================================
        RESULT COUNT & SHOW MORE
     ================================= */
