@@ -1,0 +1,513 @@
+
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Downloads & Circulars | Sujala College</title>
+
+  <meta name="description" content="Sujala College Suchna Portal - Download important circulars, notices and documents.">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" rel="stylesheet">
+
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="./css/style.css">
+
+  <style>
+    .downloads-section {
+      padding: 35px 0 55px;
+      min-height: 65vh;
+    }
+
+    .downloads-heading {
+      margin-bottom: 24px;
+    }
+
+    .downloads-heading h1 {
+      font-size: clamp(25px, 4vw, 34px);
+      font-weight: 750;
+      color: var(--navy);
+      margin-bottom: 8px;
+    }
+
+    .downloads-heading p {
+      color: var(--muted);
+      margin-bottom: 0;
+      font-size: 14px;
+    }
+
+    .downloads-search-box {
+      position: relative;
+      max-width: 100%;
+      margin-bottom: 22px;
+    }
+
+    .downloads-search {
+      width: 100%;
+      min-height: 49px;
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      padding: 12px 50px 12px 16px;
+      background: #fff;
+      color: var(--ink);
+      outline: none;
+      font-size: 14px;
+    }
+
+    .downloads-search:focus {
+      border-color: var(--navy);
+      box-shadow: 0 0 0 3px rgba(4, 19, 52, 0.07);
+    }
+
+    /* Premium Navy Clear Button */
+    .downloads-search-clear {
+      position: absolute;
+      right: 12px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 28px;
+      height: 28px;
+      border: none;
+      border-radius: 50%;
+      background: var(--navy);
+      color: #fff;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    .downloads-search-clear.show {
+      display: flex;
+    }
+
+    .downloads-search-clear i {
+      color: #fff;
+    }
+
+    .downloads-table-wrap {
+      overflow-x: auto;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      background: #fff;
+    }
+
+    .downloads-table {
+      width: 100%;
+      min-width: 520px;
+      border-collapse: collapse;
+      margin: 0;
+    }
+
+    .downloads-table thead th {
+      background: var(--navy);
+      color: #fff;
+      font-size: 13px;
+      font-weight: 650;
+      padding: 15px 18px;
+      border: none;
+    }
+
+    .downloads-table tbody td {
+      padding: 16px 18px;
+      border-bottom: 1px solid var(--line);
+      vertical-align: middle;
+      font-size: 14px;
+      color: var(--ink);
+    }
+
+    .downloads-table tbody tr:last-child td {
+      border-bottom: none;
+    }
+
+    .downloads-table tbody tr:hover {
+      background: #fffaf5;
+    }
+
+    .circular-title {
+      font-weight: 650;
+      color: var(--navy);
+      margin-bottom: 5px;
+      line-height: 1.5;
+    }
+
+    .circular-meta {
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .circular-category {
+      display: inline-block;
+      background: #fff3e7;
+      color: var(--orange);
+      padding: 4px 9px;
+      border-radius: 5px;
+      font-size: 11px;
+      font-weight: 650;
+      margin-bottom: 7px;
+    }
+
+    .download-action {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 7px;
+      padding: 9px 15px;
+      background: var(--orange);
+      color: #fff;
+      text-decoration: none;
+      border-radius: 7px;
+      font-size: 13px;
+      font-weight: 650;
+      white-space: nowrap;
+      transition: 0.2s ease;
+    }
+
+    .download-action:hover {
+      background: var(--navy);
+      color: #fff;
+    }
+
+    .downloads-empty {
+      text-align: center;
+      padding: 35px 15px;
+      color: var(--muted);
+    }
+
+    .downloads-empty i {
+      font-size: 30px;
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    .downloads-more-wrap {
+      text-align: center;
+      margin-top: 24px;
+    }
+
+    .downloads-more-btn {
+      border: none;
+      background: var(--navy);
+      color: #fff;
+      padding: 11px 26px;
+      border-radius: 7px;
+      font-size: 14px;
+      font-weight: 650;
+      transition: 0.2s ease;
+    }
+
+    .downloads-more-btn:hover {
+      background: var(--orange);
+    }
+
+    .downloads-count {
+      font-size: 12px;
+      color: var(--muted);
+      margin-top: 12px;
+    }
+
+    .downloads-error {
+      text-align: center;
+      padding: 30px 15px;
+      color: #b42318;
+    }
+
+    @media (max-width: 576px) {
+      .downloads-section {
+        padding-top: 25px;
+      }
+
+      .downloads-table thead th,
+      .downloads-table tbody td {
+        padding: 13px 12px;
+      }
+
+      .download-action {
+        padding: 8px 11px;
+        font-size: 12px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Header -->
+  <div id="siteHeader"></div>
+
+  <main class="downloads-section">
+    <div class="container">
+
+      <!-- Page Heading -->
+      <div class="downloads-heading">
+        <h1>Downloads & Circulars</h1>
+        <p>Important notices, circulars and documents for students.</p>
+      </div>
+
+      <!-- Search -->
+      <div class="downloads-search-box">
+        <input
+          type="search"
+          id="downloadsSearch"
+          class="downloads-search"
+          placeholder="Search circulars, notices or documents..."
+          autocomplete="off"
+        >
+
+        <button
+          type="button"
+          id="clearDownloadsSearch"
+          class="downloads-search-clear"
+          aria-label="Clear search"
+        >
+          <i class="bi bi-x"></i>
+        </button>
+      </div>
+
+      <!-- Table -->
+      <div class="downloads-table-wrap">
+        <table class="downloads-table">
+          <thead>
+            <tr>
+              <th style="width: 75%;">Circular Details</th>
+              <th style="width: 25%; text-align:center;">Download</th>
+            </tr>
+          </thead>
+
+          <tbody id="downloadsTableBody">
+            <tr>
+              <td colspan="2" class="downloads-empty">
+                <i class="bi bi-arrow-repeat"></i>
+                Loading downloads...
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Show More -->
+      <div class="downloads-more-wrap" id="downloadsMoreWrap" hidden>
+        <button type="button" class="downloads-more-btn" id="downloadsMoreBtn">
+          Show More <i class="bi bi-chevron-down ms-1"></i>
+        </button>
+
+        <div class="downloads-count" id="downloadsCount"></div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <div id="siteFooter"></div>
+
+  <!-- Back to Top -->
+  <button id="backToTop" class="back-to-top" aria-label="Back to top">
+    <i class="bi bi-arrow-up"></i>
+  </button>
+
+  <!-- Header / Footer Loader -->
+  <script>
+    async function loadLayout() {
+      try {
+        const [headerResponse, footerResponse] = await Promise.all([
+          fetch("./data/header.json"),
+          fetch("./data/footer.json")
+        ]);
+
+        if (headerResponse.ok) {
+          const headerData = await headerResponse.json();
+          document.getElementById("siteHeader").innerHTML = headerData.html || "";
+        }
+
+        if (footerResponse.ok) {
+          const footerData = await footerResponse.json();
+          document.getElementById("siteFooter").innerHTML = footerData.html || "";
+        }
+      } catch (error) {
+        console.error("Layout loading error:", error);
+      }
+    }
+
+    loadLayout();
+  </script>
+
+  <!-- Downloads Logic -->
+  <script>
+    const INITIAL_LIMIT = 25;
+    const LOAD_MORE_LIMIT = 25;
+
+    const tableBody = document.getElementById("downloadsTableBody");
+    const searchInput = document.getElementById("downloadsSearch");
+    const clearButton = document.getElementById("clearDownloadsSearch");
+    const moreWrap = document.getElementById("downloadsMoreWrap");
+    const moreButton = document.getElementById("downloadsMoreBtn");
+    const countText = document.getElementById("downloadsCount");
+
+    let allDownloads = [];
+    let filteredDownloads = [];
+    let visibleCount = INITIAL_LIMIT;
+
+    async function loadDownloads() {
+      try {
+        const response = await fetch("./data/downloads.json");
+
+        if (!response.ok) {
+          throw new Error("Downloads JSON could not be loaded.");
+        }
+
+        const data = await response.json();
+
+        allDownloads = Array.isArray(data) ? data : [];
+        filteredDownloads = [...allDownloads];
+
+        renderDownloads();
+
+      } catch (error) {
+        console.error(error);
+
+        tableBody.innerHTML = `
+          <tr>
+            <td colspan="2" class="downloads-error">
+              <i class="bi bi-exclamation-circle"></i>
+              <br>
+              Downloads load नहीं हो पाए। कृपया बाद में पुनः प्रयास करें।
+            </td>
+          </tr>
+        `;
+      }
+    }
+
+    function renderDownloads() {
+      const visibleItems = filteredDownloads.slice(0, visibleCount);
+
+      if (visibleItems.length === 0) {
+        tableBody.innerHTML = `
+          <tr>
+            <td colspan="2" class="downloads-empty">
+              <i class="bi bi-search"></i>
+              कोई Circular या Document नहीं मिला।
+            </td>
+          </tr>
+        `;
+      } else {
+        tableBody.innerHTML = visibleItems.map(item => {
+          const title = escapeHTML(item.title || "Untitled Circular");
+          const category = escapeHTML(item.category || "General");
+          const date = escapeHTML(item.date || "");
+          const description = escapeHTML(item.description || "");
+          const fileUrl = safeFileUrl(item.fileUrl);
+
+          return `
+            <tr>
+              <td>
+                <div class="circular-category">${category}</div>
+                <div class="circular-title">${title}</div>
+                <div class="circular-meta">
+                  ${date ? `<i class="bi bi-calendar3 me-1"></i>${date}` : ""}
+                  ${description ? ` ${date ? " • " : ""}${description}` : ""}
+                </div>
+              </td>
+
+              <td style="text-align:center;">
+                ${
+                  fileUrl
+                    ? `<a href="${fileUrl}" class="download-action" target="_blank" rel="noopener noreferrer" download>
+                         <i class="bi bi-download"></i> Download
+                       </a>`
+                    : `<span class="circular-meta">Not Available</span>`
+                }
+              </td>
+            </tr>
+          `;
+        }).join("");
+      }
+
+      const hasMore = filteredDownloads.length > visibleCount;
+
+      moreWrap.hidden = !hasMore;
+
+      countText.textContent =
+        `Showing ${Math.min(visibleCount, filteredDownloads.length)} of ${filteredDownloads.length} records`;
+    }
+
+    function escapeHTML(value) {
+      return String(value).replace(/[&<>"']/g, char => ({
+        "&": "&amp;",
+        "<": "&lt;",
+        ">": "&gt;",
+        '"': "&quot;",
+        "'": "&#039;"
+      })[char]);
+    }
+
+    function safeFileUrl(value) {
+      if (!value) return "";
+
+      try {
+        const url = new URL(value, window.location.href);
+
+        if (url.protocol === "http:" || url.protocol === "https:") {
+          return escapeHTML(url.href);
+        }
+      } catch (error) {
+        return "";
+      }
+
+      return "";
+    }
+
+    searchInput.addEventListener("input", () => {
+      const query = searchInput.value.trim().toLowerCase();
+
+      clearButton.classList.toggle("show", query.length > 0);
+
+      filteredDownloads = allDownloads.filter(item => {
+        const searchableText = [
+          item.title,
+          item.category,
+          item.date,
+          item.description
+        ].join(" ").toLowerCase();
+
+        return searchableText.includes(query);
+      });
+
+      visibleCount = INITIAL_LIMIT;
+      renderDownloads();
+    });
+
+    clearButton.addEventListener("click", () => {
+      searchInput.value = "";
+      searchInput.dispatchEvent(new Event("input"));
+      searchInput.focus();
+    });
+
+    moreButton.addEventListener("click", () => {
+      visibleCount += LOAD_MORE_LIMIT;
+      renderDownloads();
+    });
+
+    // Back to Top
+    const backToTop = document.getElementById("backToTop");
+
+    if (backToTop) {
+      window.addEventListener("scroll", () => {
+        backToTop.classList.toggle("show", window.scrollY > 300);
+      });
+
+      backToTop.addEventListener("click", () => {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      });
+    }
+
+    loadDownloads();
+  </script>
+
+</body>
+</html>
