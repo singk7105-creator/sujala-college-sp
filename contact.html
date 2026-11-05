@@ -67,10 +67,14 @@
                   <input class="form-control" id="name" name="name" placeholder="अपना नाम लिखें" required>
                 </div>
                 <div class="col-md-6">
+                  <label class="form-label" for="mobile">Mobile Number <span class="text-muted">(Optional)</span></label>
+                  <input class="form-control" type="tel" id="mobile" name="mobile" placeholder="10 अंकों का मोबाइल नंबर" inputmode="numeric" pattern="[6-9][0-9]{9}" maxlength="10" title="कृपया सही 10 अंकों का भारतीय मोबाइल नंबर दर्ज करें">
+                </div>
+                <div class="col-md-6">
                   <label class="form-label" for="email">Email Address</label>
                   <input class="form-control" type="email" id="email" name="email" placeholder="name@example.com" required>
                 </div>
-                <div class="col-12">
+                <div class="col-6">
                   <label class="form-label" for="subject">Subject</label>
                   <input class="form-control" id="subject" name="subject" placeholder="संदेश का विषय" required>
                 </div>
@@ -116,8 +120,7 @@
       </div>
       <hr class="border-light opacity-25 my-4">
       <div class="d-flex justify-content-between small">
-        <span>
-          © <span id="year"></span> Sujala_College Suchna Portal. All Rights Reserved.
+        <span>© <span id="year"></span> Sujala_College Suchna Portal. All Rights Reserved.
         </span>
         <span>Design with 🧡 for students.</span>
       </div>
@@ -166,7 +169,7 @@
     }
 
     // 3. Contact Form Handler (Google Apps Script)
-    const GOOGLE_SCRIPT_URL = "PASTE_YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL_HERE";
+    const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxy3F2xMfxgqmjaIIxso9d_AslNfRZ3GTiXXfgSAB1W66yYWjw2go1Ry9EmnjXMbh1h0A/exec";
     const contactForm = document.getElementById("contactForm");
     const contactStatus = document.getElementById("contactStatus");
     const contactSubmit = document.getElementById("contactSubmit");
@@ -186,9 +189,11 @@
       
       const payload = new URLSearchParams({
         name: document.getElementById("name").value.trim(),
+        mobile: document.getElementById("mobile").value.trim(),
         email: document.getElementById("email").value.trim(),
         subject: document.getElementById("subject").value.trim(),
-        message: document.getElementById("message").value.trim()
+        message: document.getElementById("message").value.trim(),
+        website: document.getElementById("website").value.trim()
       });
 
       try {
