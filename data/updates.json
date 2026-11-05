@@ -1,19 +1,27 @@
 [
   {
+    "category": "ANNOUNCEMENT",
+    "date": "CAMPUS NEWS",
+    "title": "दीपावली अवकाश के संबंध में सूचना",
+    "description": "राजस्थान राज्य के समस्त राजकीय महाविद्यालयों में दीपावली का अवकाश 06 नवम्बर से 12 नवम्बर 2026 तक रहेगा।",
+    "link": "https://t.me/sujala_college",
+    "icon": "bi-megaphone"
+  },
+  {
+    "category": "TODAY RESULT",
+    "date": "05 NOVEMBER 2026",
+    "title": "स्नातकोत्तर स्तर के परीक्षा परिणाम जारी",
+    "description": "बीकानेर विश्वविद्यालय (MGSU) द्वारा स्नातकोत्तर स्तर के कुछ परिणाम जारी किए गए हैं।",
+    "link": "results.html",
+    "icon": "bi-clipboard-check"
+  },
+  {
     "category": "NOTIFICATION",
     "date": "04 NOVEMBER 2026",
     "title": "MGSU NEP Panel में E-Mail Verification करना अनिवार्य",
     "description": "बीकानेर विश्वविद्यालय (MGSU) द्वारा NEP पैनल में ई-मेल आईडी का वेरिफिकेशन करना अनिवार्य कर दिया गया है।",
     "link": "./2026/nep-panel-email-verification-updt.html",
     "icon": "bi-app-indicator"
-  },
-  {
-    "category": "TODAY RESULT",
-    "date": "03 NOVEMBER 2026",
-    "title": "स्नातकोत्तर स्तर के परीक्षा परिणाम जारी",
-    "description": "बीकानेर विश्वविद्यालय (MGSU) द्वारा स्नातकोत्तर स्तर के कुछ परिणाम जारी किए गए हैं।",
-    "link": "results.html",
-    "icon": "bi-clipboard-check"
   },
   {
     "category": "Time Table",
@@ -30,14 +38,6 @@
     "description": "एडमिशन की अंतिम तिथि, आवेदन प्रक्रिया या मेरिट लिस्ट की जानकारी।",
     "link": "contact.html",
     "icon": "bi-mortarboard"
-  },
-  {
-    "category": "ANNOUNCEMENT",
-    "date": "CAMPUS NEWS",
-    "title": "नई घोषणा / कैंपस अपडेट",
-    "description": "कार्यक्रम, परीक्षा या अन्य महत्वपूर्ण घोषणा का विवरण।",
-    "link": "contact.html",
-    "icon": "bi-megaphone"
   },
   {
     "category": "RESULT",
