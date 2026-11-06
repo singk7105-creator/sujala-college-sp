@@ -1,21 +1,21 @@
 [
   {
-    "title": "Notifications",
-    "description": "कॉलेज और यूनिवर्सिटी के जरूरी नोटिस और आधिकारिक सूचनाएँ।",
-    "icon": "bi-bell",
-    "link": "index.html#updates"
+    "title": "MGSU office Portal",
+    "description": "महाराजा गंगा सिंह विश्वविद्यालय के आधिकारिक वेबसाइट",
+    "icon": "bi-mortarboard",
+    "link": "https://mgsubikaner.ac.in/"
   },
   {
-    "title": "Latest Updates",
-    "description": "नए अपडेट, महत्वपूर्ण तिथियाँ और विद्यार्थियों के लिए ताजा जानकारी।",
-    "icon": "bi-calendar2-week",
-    "link": "index.html#updates"
+    "title": "MGSU Student ERP",
+    "description": "विद्यार्थी लॉगिन, परीक्षा एवं शैक्षणिक सेवाएं",
+    "icon": "bi-person-workspace",
+    "link": "https://erp.univindia.net/"
   },
   {
-    "title": "Admissions",
-    "description": "प्रवेश प्रक्रिया, आवेदन तिथि, मेरिट लिस्ट और एडमिशन गाइड।",
+    "title": "ABC ID",
+    "description": "Academic Bank of Credits से संबंधित सेवाएं",
     "icon": "bi-journal-bookmark",
-    "link": "contact.html"
+    "link": "https://www.abc.gov.in/"
   },
   {
     "title": "Announcements",
@@ -28,18 +28,6 @@
     "description": "परीक्षा परिणाम, री-चेकिंग और रिजल्ट से संबंधित उपयोगी लिंक।",
     "icon": "bi-clipboard2-check",
     "link": "results.html"
-  },
-  {
-    "title": "Exam & Time Table",
-    "description": "परीक्षा कार्यक्रम, टाइम टेबल, प्रैक्टिकल और अन्य शेड्यूल।",
-    "icon": "bi-calendar3",
-    "link": "download-circular.html"
-  },
-  {
-    "title": "Scholarships",
-    "description": "छात्रवृत्ति योजनाएँ, पात्रता, आवेदन और जरूरी दस्तावेजों की जानकारी।",
-    "icon": "bi-award",
-    "link": "index.html#updates"
   },
   {
     "title": "Forms & Downloads",
