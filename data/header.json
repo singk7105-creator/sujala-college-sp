@@ -1,7 +1,7 @@
 {
   "brandName": "Sujala_<span>College</span>",
   "brandSub": "SUCHNA PORTAL",
-  "logo": "./assets/images/logo-1.jpg",
+  "logo": "assets/images/header-logo.jpg",
   "navLinks": [
     { "title": "Home", "link": "index.html#home" },
     { "title": "Our Apps", "link": "index.html#apps" },
