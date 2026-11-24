@@ -1,13 +1,13 @@
 {
   "brandName": "Sujala_<span>College</span>",
   "brandSub": "SUCHNA PORTAL",
-  "logo": "assets/images/header-logo.jpg",
+  "logo": "./assets/images/header-logo.jpg",
   "navLinks": [
     { "title": "Home", "link": "index.html#home" },
     { "title": "Our Apps", "link": "index.html#apps" },
     { "title": "Latest Updates", "link": "index.html#updates" },
     { "title": "Results", "link": "results.html" },
-    { "title": "About", "link": "about.html" },
-    { "title": "Contact", "link": "contact.html" }
+    { "title": "About", "link": "pages/about.html" },
+    { "title": "Contact", "link": "pages/contact.html" }
   ]
 }
