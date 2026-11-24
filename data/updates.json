@@ -12,7 +12,7 @@
     "date": "05 NOVEMBER 2026",
     "title": "स्नातकोत्तर स्तर के परीक्षा परिणाम जारी",
     "description": "बीकानेर विश्वविद्यालय (MGSU) द्वारा स्नातकोत्तर स्तर के कुछ परिणाम जारी किए गए हैं।",
-    "link": "results.html",
+    "link": "pages/results.html",
     "icon": "bi-clipboard-check"
   },
   {
@@ -36,7 +36,7 @@
     "date": "ADMISSION DESK",
     "title": "प्रवेश से संबंधित अपडेट",
     "description": "एडमिशन की अंतिम तिथि, आवेदन प्रक्रिया या मेरिट लिस्ट की जानकारी।",
-    "link": "contact.html",
+    "link": "pages/contact.html",
     "icon": "bi-mortarboard"
   },
   {
@@ -44,7 +44,7 @@
     "date": "RESULT DESK",
     "title": "परीक्षा परिणाम अपडेट",
     "description": "रिजल्ट और री-चेकिंग से संबंधित जानकारी यहाँ प्रकाशित करें।",
-    "link": "contact.html",
+    "link": "pages/contact.html",
     "icon": "bi-clipboard-check"
   }
 ]
