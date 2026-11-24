@@ -1,6 +1,8 @@
 <!doctype html>
 <html lang="hi">
 <head>
+
+  <base href="/">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -16,7 +18,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Hind:wght@400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
   <!-- Main CSS -->
-  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="css/style.css">
 
   <style>
     /* =================================
@@ -385,7 +387,7 @@
       const resultInfo = document.getElementById("resultInfo");
 
       try {
-        const response = await fetch("./data/results.json");
+        const response = await fetch("data/results.json");
 
         if (!response.ok) {
           throw new Error("Results JSON file not found");
@@ -526,7 +528,7 @@
     // =================================
     async function loadHeader() {
       try {
-        const res = await fetch('./data/header.json');
+        const res = await fetch('data/header.json');
         if (!res.ok) {
           throw new Error("Header not found");
         }
@@ -583,7 +585,7 @@
     // =================================
     async function loadFooter() {
       try {
-        const res = await fetch('./data/footer.json');
+        const res = await fetch('data/footer.json');
         if (!res.ok) {
           throw new Error("Footer not found");
         }
