@@ -1,6 +1,8 @@
 <!doctype html>
 <html lang="hi">
 <head>
+
+  <base href="/">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -16,7 +18,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Hind:wght@400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
   <!-- Main CSS -->
-  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="css/style.css">
 
   <style>
     /* =================================
@@ -206,7 +208,7 @@
     <div class="container">
       <!-- Back To Home -->
       <div class="notice-top-row">
-        <a href="../index.html" class="notice-back">
+        <a href="index.html" class="notice-back">
           <i class="bi bi-arrow-left"></i>
           Back to Home
         </a>
@@ -235,7 +237,7 @@
           
           <!-- Notice Poster / Image -->
           <div class="notice-img-wrap mb-4">
-            <img src="https://i.ibb.co/QFVjHjyb/20260602-104806.jpg" alt="Supplementary Examination Time Table Notice" class="img-fluid shadow-sm">
+            <img src="assets/images/header-logo.png" alt="Supplementary Examination Time Table Notice" class="img-fluid shadow-sm">
           </div>
 
           <!-- Notice Description -->
@@ -258,7 +260,7 @@
               </p>
             </div>
             <div>
-              <a href="../download-circular.html" target="_blank" rel="noopener" class="btn download-btn px-4 py-2 fw-semibold shadow-sm">
+              <a href="pages/download-circular.html" target="_blank" rel="noopener" class="btn download-btn px-4 py-2 fw-semibold shadow-sm">
                 <i class="bi bi-download me-2"></i>
                 Download PDF
               </a>
@@ -356,7 +358,7 @@
     // Load Header
     async function loadHeader() {
       try {
-        const res = await fetch('../data/header.json');
+        const res = await fetch('data/header.json');
         if (!res.ok) throw new Error("Header not found");
 
         const data = await res.json();
@@ -422,7 +424,7 @@
     // Load Footer
     async function loadFooter() {
       try {
-        const res = await fetch('../data/footer.json');
+        const res = await fetch('data/footer.json');
         if (!res.ok) throw new Error("Footer not found");
 
         const data = await res.json();
