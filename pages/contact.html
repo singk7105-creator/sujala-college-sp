@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="hi">
 <head>
 
@@ -128,92 +128,14 @@
       </div>
     </div>
   </footer>
+  
+  <!-- Back To Top -->
+  <button class="back-top" id="backTop" aria-label="Back to top">
+    <i class="bi bi-arrow-up"></i>
+  </button>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
-  <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-
-    // 1. Load Header from header.json
-    async function loadHeader() {
-      try {
-        const res = await fetch('data/header.json');
-        const data = await res.json();
-        document.getElementById("mainNavbar").innerHTML = `
-          <div class="container">
-            <a class="navbar-brand" href="index.html">
-              <img src="${data.logo}" alt="Logo">
-              <span><span class="brand-name">${data.brandName}</span><br><span class="brand-sub">${data.brandSub}</span></span>
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="mainNav">
-              <ul class="navbar-nav ms-auto align-items-lg-center">
-                ${data.navLinks.map(nav => `<li class="nav-item"><a class="nav-link" href="${nav.link}">${nav.title}</a></li>`).join("")}
-                <li class="nav-item ms-lg-2 mt-2 mt-lg-0"><a class="btn btn-brand btn-sm" href="index.html#apps">Explore Portal <i class="bi bi-arrow-up-right ms-1"></i></a></li>
-              </ul>
-            </div>
-          </div>
-        `;
-      } catch (err) { console.error("Header load error"); }
-    }
-
-    // 2. Load Footer from footer.json
-    async function loadFooter() {
-      try {
-        const res = await fetch('data/footer.json');
-        const data = await res.json();
-        document.getElementById("footerQuickLinks").innerHTML = data.quickLinks
-          .map(item => `<li><a href="${item.link}">${item.title}</a></li>`).join("");
-        document.getElementById("footerUsefulSections").innerHTML = data.usefulSections
-          .map(item => `<li><a href="${item.link}">${item.title}</a></li>`).join("");
-      } catch (err) { console.error("Footer load error"); }
-    }
-
-    // 3. Contact Form Handler (Google Apps Script)
-    const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxy3F2xMfxgqmjaIIxso9d_AslNfRZ3GTiXXfgSAB1W66yYWjw2go1Ry9EmnjXMbh1h0A/exec";
-    const contactForm = document.getElementById("contactForm");
-    const contactStatus = document.getElementById("contactStatus");
-    const contactSubmit = document.getElementById("contactSubmit");
-
-    contactForm.addEventListener("submit", async function (event) {
-      event.preventDefault();
-      if (document.getElementById("website").value.trim() !== "") return;
-      
-      if (!GOOGLE_SCRIPT_URL.startsWith("https://script.google.com/macros/s/")) {
-        contactStatus.className = "alert alert-warning mt-3 mb-0 d-block";
-        contactStatus.textContent = "Please set Google Apps Script URL first.";
-        return;
-      }
-
-      contactSubmit.disabled = true;
-      contactSubmit.innerHTML = 'Sending...';
-      
-      const payload = new URLSearchParams({
-        name: document.getElementById("name").value.trim(),
-        mobile: document.getElementById("mobile").value.trim(),
-        email: document.getElementById("email").value.trim(),
-        subject: document.getElementById("subject").value.trim(),
-        message: document.getElementById("message").value.trim(),
-        website: document.getElementById("website").value.trim()
-      });
-
-      try {
-        await fetch(GOOGLE_SCRIPT_URL, { method: "POST", mode: "no-cors", body: payload });
-        contactStatus.className = "alert alert-success mt-3 mb-0 d-block";
-        contactStatus.textContent = "आपका संदेश सफलतापूर्वक भेज दिया गया है।";
-        contactForm.reset();
-      } catch (error) {
-        contactStatus.className = "alert alert-danger mt-3 mb-0 d-block";
-        contactStatus.textContent = "संदेश भेजने में समस्या आई। कृपया पुनः प्रयास करें।";
-      } finally {
-        contactSubmit.disabled = false;
-        contactSubmit.innerHTML = 'Send Message <i class="bi bi-send ms-2"></i>';
-      }
-    });
-
-    loadHeader();
-    loadFooter();
-  </script>
+  <script src="js/common.js" defer></script>
+  <script src="js/contact-form.js" defer></script>
 </body>
 </html>
