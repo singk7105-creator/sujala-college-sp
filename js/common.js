@@ -48,7 +48,7 @@ async function loadHeader() {
       return;
     }
 
-    const res = await fetch('./data/header.json');
+    const res = await fetch('data/header.json');
 
     if (!res.ok) {
       throw new Error(`HTTP Error: ${res.status}`);
