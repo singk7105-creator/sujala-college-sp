@@ -1,25 +1,16 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="hi">
 <head>
-
   <base href="/">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>Supplementary Time Table 2026 (Annual) | Sujala_College Suchna Portal</title>
 
-  <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
-
-  <!-- Bootstrap Icons -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
-
-  <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Hind:wght@400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-
-  <!-- Main CSS -->
   <link rel="stylesheet" href="css/style.css">
-
   <style>
     /* =================================
        NOTICE HEADING SECTION
@@ -191,21 +182,16 @@
     }
   </style>
 </head>
-
 <body>
-
-  <!-- =================================
-       DYNAMIC NAVBAR
-  ================================= -->
+  <!-- Dynamic Navbar -->
   <nav class="navbar navbar-expand-lg sticky-top" id="mainNavbar">
-    <!-- Header JSON se load hoga -->
+    <!-- header json se load hoga -->
   </nav>
 
-  <!-- =================================
-       NOTICE HEADING SECTION
-  ================================= -->
+  <!-- Notice Heading Section -->
   <section class="notice-heading-section">
     <div class="container">
+      
       <!-- Back To Home -->
       <div class="notice-top-row">
         <a href="index.html" class="notice-back">
@@ -227,9 +213,7 @@
     </div>
   </section>
 
-  <!-- =================================
-       MAIN NOTICE CONTENT
-  ================================= -->
+  <!-- Main Notice Content -->
   <main class="container mb-4">
     <div class="row justify-content-center">
       <div class="col-lg-10">
@@ -244,7 +228,6 @@
           <p class="text-secondary lh-lg">
             विश्वविद्यालय द्वारा स्नातक स्तर (वार्षिक परीक्षा प्रणाली) के अंतर्गत आयोजित होने वाली सप्लीमेंट्री परीक्षाओं की समय सारणी (Time Table) आधिकारिक पोर्टल पर जारी कर दी गई है। सभी संबंधित छात्र-छात्राएं नीचे दिए गए लिंक से अपना टाइम टेबल डाउनलोड कर परीक्षा तिथियों की जांच कर सकते हैं।
           </p>
-
           <p class="text-secondary lh-lg mb-4">
             विद्यार्थी अपना टाइम टेबल हमारे टेलीग्राम चैनल पर देख सकते हैं। आधिकारिक पुष्टि विश्वविद्यालय एवं महाविद्यालय की वेबसाइट से करें।
           </p>
@@ -261,8 +244,7 @@
             </div>
             <div>
               <a href="pages/download-circular.html" target="_blank" rel="noopener" class="btn download-btn px-4 py-2 fw-semibold shadow-sm">
-                <i class="bi bi-download me-2"></i>
-                Download PDF
+                <i class="bi bi-download me-2"></i>  Download PDF
               </a>
             </div>
           </div>
@@ -273,19 +255,15 @@
               TIME TABLE UPDATE
             </span>
           </div>
-
         </div>
       </div>
     </div>
   </main>
 
-  <!-- =================================
-       DYNAMIC FOOTER
-  ================================= -->
+  <!-- Dynamic Footer -->
   <footer>
     <div class="container">
       <div class="row g-4">
-        <!-- Portal Information -->
         <div class="col-lg-4">
           <h5>Sujala_College Suchna Portal</h5>
           <p class="mt-2 mb-3">
@@ -294,14 +272,10 @@
           </p>
           <div class="mt-3" id="footerSocialLinks"></div>
         </div>
-
-        <!-- Quick Links -->
         <div class="col-6 col-lg-4">
           <h5>Quick Links</h5>
           <ul class="list-unstyled lh-lg mt-3" id="footerQuickLinks"></ul>
         </div>
-
-        <!-- Useful Sections -->
         <div class="col-6 col-lg-4">
           <h5>Useful Sections</h5>
           <ul class="list-unstyled lh-lg mt-3" id="footerUsefulSections"></ul>
@@ -311,8 +285,6 @@
           <p class="mt-3">सही जानकारी, सरल पहुँच और विद्यार्थियों के लिए उपयोगी डिजिटल अनुभव।</p>
         </div>
       </div>
-
-      <!-- Footer Bottom -->
       <hr class="border-light opacity-25 my-4">
       <div class="d-flex justify-content-between small">
         <span>
@@ -323,163 +295,12 @@
     </div>
   </footer>
 
-  <!-- =================================
-       BACK TO TOP BUTTON
-  ================================= -->
+  <!-- Back to Top Button -->
   <button class="back-top" id="backTop" aria-label="Back to top">
     <i class="bi bi-arrow-up"></i>
   </button>
 
-  <!-- =================================
-       BOOTSTRAP JAVASCRIPT
-  ================================= -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
-
-  <!-- =================================
-       PAGE JAVASCRIPT
-  ================================= -->
-  <script>
-    // Current Year
-    document.getElementById("year").textContent = new Date().getFullYear();
-
-    // Back To Top
-    const backTop = document.getElementById("backTop");
-    window.addEventListener("scroll", () => {
-      backTop.classList.toggle("show", window.scrollY > 450);
-    });
-
-    backTop.addEventListener("click", () => {
-      window.scrollTo({
-        top: 0,
-        behavior: "smooth"
-      });
-    });
-
-    // Load Header
-    async function loadHeader() {
-      try {
-        const res = await fetch('data/header.json');
-        if (!res.ok) throw new Error("Header not found");
-
-        const data = await res.json();
-
-        // Fix Internal Navigation Links
-        const fixLink = (link) => {
-          if (!link) return '../index.html';
-
-          if (
-            /^(https?:|mailto:|tel:|#|javascript:)/i.test(link) ||
-            link.startsWith('/')
-          ) {
-            return link;
-          }
-
-          return '../' + link.replace(/^\.?\//, '');
-        };
-
-        document.getElementById("mainNavbar").innerHTML = `
-          <div class="container">
-            <a class="navbar-brand" href="../index.html">
-              <img src="${data.logo}" alt="Logo">
-              <span>
-                <span class="brand-name">${data.brandName}</span><br>
-                <span class="brand-sub">${data.brandSub}</span>
-              </span>
-            </a>
-
-            <button class="navbar-toggler" type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#mainNav"
-              aria-controls="mainNav"
-              aria-expanded="false"
-              aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <div class="collapse navbar-collapse" id="mainNav">
-              <ul class="navbar-nav ms-auto align-items-lg-center">
-                ${data.navLinks.map(nav => `
-                  <li class="nav-item">
-                    <a class="nav-link" href="${fixLink(nav.link)}">
-                      ${nav.title}
-                    </a>
-                  </li>
-                `).join("")}
-
-                <li class="nav-item ms-lg-2 mt-2 mt-lg-0">
-                  <a class="btn btn-brand btn-sm" href="../index.html#apps">
-                    Explore Portal
-                    <i class="bi bi-arrow-up-right ms-1"></i>
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        `;
-      } catch (err) {
-        console.error("Header load error:", err);
-      }
-    }
-
-    // Load Footer
-    async function loadFooter() {
-      try {
-        const res = await fetch('data/footer.json');
-        if (!res.ok) throw new Error("Footer not found");
-
-        const data = await res.json();
-
-        // Fix Internal Footer Links
-        const fixLink = (link) => {
-          if (!link) return '../index.html';
-
-          if (
-            /^(https?:|mailto:|tel:|#|javascript:)/i.test(link) ||
-            link.startsWith('/')
-          ) {
-            return link;
-          }
-
-          return '../' + link.replace(/^\.?\//, '');
-        };
-
-        // Quick Links
-        document.getElementById("footerQuickLinks").innerHTML =
-          data.quickLinks.map(item => `
-            <li>
-              <a href="${fixLink(item.link)}">${item.title}</a>
-            </li>
-          `).join("");
-
-        // Useful Sections
-        document.getElementById("footerUsefulSections").innerHTML =
-          data.usefulSections.map(item => `
-            <li>
-              <a href="${fixLink(item.link)}">${item.title}</a>
-            </li>
-          `).join("");
-
-        // Social Links
-        if (data.socialLinks) {
-          document.getElementById("footerSocialLinks").innerHTML =
-            data.socialLinks.map(s => `
-              <a class="style-link"
-                 href="${s.link}"
-                 target="_blank"
-                 rel="noopener">
-                <i class="bi ${s.icon}"></i>
-              </a>
-            `).join("");
-        }
-      } catch (err) {
-        console.error("Footer load error:", err);
-      }
-    }
-
-    // Initialize Page
-    loadHeader();
-    loadFooter();
-  </script>
-
+  <script src="js/common.js" defer></script>
 </body>
 </html>
